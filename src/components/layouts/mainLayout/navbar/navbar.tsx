@@ -2,20 +2,14 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
-import {
-  AppLogo,
-  ArrowDown,
-  ButtonArrow,
-  CancelIcon,
-  Hamburger,
-} from "@/assets/icons";
+import { ArrowDown, ButtonArrow, CancelIcon, Hamburger } from "@/assets/icons";
 import { Button } from "@/components";
 import { Menu, Transition } from "@headlessui/react";
 import { Fragment, useState } from "react";
 import { languages, routes, services } from "@/data";
 import { MobileNav } from "./mobileNav/mobileNav";
 import Image from "next/image";
-import logo from '@/assets/images/logo2.png'
+import logo from "@/assets/images/logo2.png";
 
 export const Navbar = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
@@ -25,16 +19,17 @@ export const Navbar = () => {
     <>
       <header className="bg-white shadow-[0px_1px_4px_0px_#0000000D] w-full">
         <div className="flex lg:space-x-[115px] px-[3%] sm:px-0 items-center max-w-[70.6rem] mx-auto pt-[8px] pb-[10px]">
-          <Link href="/" className="flex-grow">
-            <Image src={logo} alt="Company Logo" className="w-[58px]" />
+          <Link href="/" className="flex-grow my-[9.2px]">
+            <Image src={logo} alt="Company Logo" className="!w-[60px]" />
           </Link>
           <nav className="hidden xl:block">
             <ul className="flex space-x-[45px] text-dark/50 font-semibold tracking-wider text-[14px] transition-all duration-300">
               {routes.map((route) => (
                 <li
                   key={route.id}
-                  className={`flex items-center justify-center ${current === route.link ? " text-dark" : ""
-                    }`}
+                  className={`flex items-center justify-center ${
+                    current === route.link ? " text-dark" : ""
+                  }`}
                 >
                   {current === route.link && (
                     <div className="w-[2.5rem] h-[2.6px] bg-primary/60 absolute bottom-0 rounded-full" />
@@ -74,13 +69,14 @@ export const Navbar = () => {
                                         <Menu.Item>
                                           {({ active }) => (
                                             <Link
-                                              className={`w-full flex space-x-8 items-center bg-gray/50 font-medium ${active && ""
-                                                }`}
+                                              className={`w-full flex space-x-8 items-center bg-gray/50 font-medium ${
+                                                active && ""
+                                              }`}
                                               href={link}
                                             >
                                               <Icon className="w-10 h-10" />
                                               {text}
-                                              <ButtonArrow className="hover:text-gray/50 w-4 h-4" />
+                                              <ButtonArrow className="hover:text-gray/50 w-8 h-8" />
                                             </Link>
                                           )}
                                         </Menu.Item>
@@ -118,7 +114,7 @@ export const Navbar = () => {
                   {({ open }) => (
                     <>
                       <Menu.Button className={"flex items-center space-x-1"}>
-                        <div className="cursor-pointer font-medium">EN</div>
+                        <div className="cursor-pointer font-medium">{"EN"}</div>
                         {open ? (
                           <ArrowDown className="ml-1 rotate-180 cursor-pointer" />
                         ) : (
@@ -145,8 +141,9 @@ export const Navbar = () => {
                               <Menu.Item>
                                 {({ active }) => (
                                   <div
-                                    className={`w-full cursor-pointer hover:bg-gray-primary flex space-x-8 items-center text-gray-primary/70 font-normal ${active && ""
-                                      }`}
+                                    className={`w-full cursor-pointer  flex space-x-8 items-center text-gray-primary/70 font-normal ${
+                                      active && ""
+                                    }`}
                                   >
                                     {language}
                                     <ButtonArrow className="hover:text-gray/50 w-4 h-4" />
@@ -173,15 +170,17 @@ export const Navbar = () => {
                 className="mr-2 lg:mr-0  !py-[8px] md:!py-[9.6px]"
               />
               <button
-                className={`w-10  flex justify-center ${isOpen === true ? "hidden" : ""
-                  } cursor-pointer transition-all duration-300`}
+                className={`w-10  flex justify-center ${
+                  isOpen === true ? "hidden" : ""
+                } cursor-pointer transition-all duration-300`}
                 onClick={() => setIsOpen((c) => !c)}
               >
                 <Hamburger className={`xl:hidden cursor-pointer`} />
               </button>
               <button
-                className={`w-10 flex justify-center xl:hidden ${!isOpen ? "hidden" : ""
-                  } cursor-pointer transition-all duration-300`}
+                className={`w-10 flex justify-center xl:hidden ${
+                  !isOpen ? "hidden" : ""
+                } cursor-pointer transition-all duration-300`}
                 onClick={() => setIsOpen((c) => !c)}
               >
                 <CancelIcon className="fill-current text-dark cursor-pointer w-5 h-5" />

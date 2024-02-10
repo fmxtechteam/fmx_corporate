@@ -6,7 +6,7 @@ import { Achievements, ShowcaseBanner } from "@/components";
 export const LogisticsComponent = () => {
   return (
     <div>
-      <div className="z-20 relative bg-secondary">
+      <div className="z-20 relative">
         <ShowcaseBanner
           icon={LogisticsBadge}
           className="!max-w-[20rem] md:!max-w-[33rem] !-mt-0 md:!-mt-0 leading-[50px]"

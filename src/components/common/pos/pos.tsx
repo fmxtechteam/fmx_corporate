@@ -4,7 +4,7 @@ import { PosIcon } from "@/assets/icons";
 export const Pos = () => {
   return (
     <div>
-      <div className="z-20 -mt-6 md:-mt-0 relative bg-secondary">
+      <div className="z-20 -mt-6 md:-mt-0 relative">
         <ShowcaseBanner
           title={"Buying and Selling Produce Made easier"}
           className="!max-w-[20rem] md:!max-w-[33rem] -mt-0 md:-mt-0 leading-[50px]"

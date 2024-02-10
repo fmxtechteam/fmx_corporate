@@ -77,7 +77,7 @@ export const ShowcaseBanner: React.FC<IServiceShowcase> = ({
       </main>
       {aboutUsImg && (
         <>
-          <div className="hidden md:block !z-50 md:-mt-[449px] -mt-[280px]  absolute">
+          <div className="hidden md:block !z-50 xl:-mt-[449px] -mt-[280px]  absolute">
             <Image
               src={aboutUsShowcaseImg}
               className=""

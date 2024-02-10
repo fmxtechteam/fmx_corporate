@@ -4,7 +4,7 @@ import { Achievements, ShowcaseBanner } from "@/components";
 export const OnlineOrdering = () => {
   return (
     <div>
-      <div className="z-20 relative bg-secondary">
+      <div className="z-20 relative">
         <ShowcaseBanner
           title={"Buy produce Anytime, Anywhere."}
           icon={ServicesOnlineOrdering}
