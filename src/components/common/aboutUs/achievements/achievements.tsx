@@ -1,9 +1,9 @@
-import { Button } from "@/components";
 import { achievements } from "@/data";
+import { Button } from "@/components";
 
 export const AchievementsComponent = () => {
   return (
-    <section className="z-40 grid md:grid-cols-2 md:gap-20 px-[3%] sm:px-0  items-center max-w-[78rem] mx-auto ">
+    <section className="z-40 grid md:grid-cols-2 md:-mt-[20rem] lg:-mt-[20rem] xl:mt-40 2xl:-mt-0 md:gap-20 px-[3%] sm:px-0  items-center max-w-[78rem] mx-auto">
       <div className=" md:py-[6rem]   mx-auto">
         <div className="">
           <div className="pt-4">

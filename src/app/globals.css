@@ -11,8 +11,5 @@
 }
 
 .bg__about:nth-child(1) {
-  left: 0 !important;
-}
-.bg__about:nth-child(3) {
-  left: 0 !important;
+  grid-column-start: 2 !important;
 }

@@ -1,6 +1,7 @@
 import Link from "next/link";
+import Image from "next/image";
 
-import { AppLogo } from "@/assets/icons";
+import logo from "@/assets/images/logo2.png";
 import { Input } from "@/components";
 
 export const Footer = () => {
@@ -8,11 +9,15 @@ export const Footer = () => {
     <footer className="bg-[url('/images/footerBackground.png')] h-full md:h-[29.2rem] px-[3%] sm:px-0  bg-cover bg-no-repeat relative">
       <div className="md:flex pt-[3rem] md:pt-[3.7rem] items-center justify-between max-w-[70.6rem] mx-auto">
         <div>
-          <Link href="/" className="flex-grow">
-            <AppLogo className="!w-[97px] !h-[100px]" />
+          <Link href="/" className="flex-grow md:-ml-20">
+            <Image
+              src={logo}
+              alt="Company Logo"
+              className="!w-[120px] !h-[80px]"
+            />
           </Link>
-          <div className="text-[16.5px] leading-[28px] -mt-[5px] font-medium text-gray-primary/50">
-            {" Try our Point-of-sale solution now"}
+          <div className="text-[16.5px] leading-[28px]  mt-4 font-medium text-gray-primary/50">
+            {"Try our Point-of-sale solution now"}
           </div>
           <Input className="md:w-[24rem] mt-1 md:mt-[3px]" />
         </div>
@@ -80,7 +85,7 @@ export const Footer = () => {
         <div className="md:absolute bottom-8 w-full justify-between items-center lg:flex max-w-[70.6rem] mx-auto text-[15px]  md:text-[14.8px] leading-[40px] md:leading-[28px] -mt-[3px] font-medium text-gray-primary/50">
           <ul className="flex space-x-7 list-disc md:hidden mb-16">
             <li className="list-none">
-              <Link href={"/terms-and-conditions"}> Terms and Conditions</Link>
+              <Link href={"/terms-and-conditions"}>Terms and Conditions</Link>
             </li>
             <li>
               <Link href={"/privacy-Policy"}>

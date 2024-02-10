@@ -28,13 +28,13 @@ export const ContactUsCard = ({
               <div className="text-xl leading-[28px]  md:text-2xl pb-5 -mt-[5px] font-medium ">
                 {country}
               </div>
-              <div className="text-2xl md:text-[26px] leading-[45px] !min-w-[20rem] text-gray/75 max-w-sm md:leading-[28px] -mt-[5px] font-medium ">
+              <div className="text-2xl md:text-[25px] leading-[45px] !min-w-[20rem] text-gray/75 max-w-sm md:leading-[28px] -mt-[5px] font-medium ">
                 {address}
               </div>
               <Button
                 link={"https://www.google.com/maps"}
                 title="Use Google Map"
-                className="sm:!px-[1rem] mt-[42px] flex justify center w-full hover:!bg-primary md:!px-[2.8rem] mb-10 md:mb-9 md:!w-fit md:!py-[.9rem] !bg-transparent !text-white !border-white !border !text-[16px] !rounded-[8px] !px-[1rem] !py-[16px] !container !flex-grow"
+                className="sm:!px-[1rem] mt-[42px] flex !justify-center md:justify-start w-full hover:!bg-primary md:!px-[2.9rem] mb-10 md:mb-9 md:!w-fit md:!py-[.9rem] !bg-transparent !text-white !border-white !border !text-[16px] !rounded-[8px] !px-[1rem] !py-[16px] !container !flex-grow"
                 icon={true}
                 iconClassName="!text-2xl"
               />

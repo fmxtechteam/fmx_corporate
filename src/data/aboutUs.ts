@@ -57,19 +57,19 @@ export const aboutUsCard = [
   },
   {
     id: 2,
-    name: "Daniella Toka",
-    title: "Assistant to the Director",
-    description:
-      "Danielle is the assistant to the director and supporting him in all aspects of his work. As a Melbourne graduate in Global Studies and Law, she brings a wealth of knowledge and expertise to her role. This allows her to engage effectively with diverse teams around the world and contribute to the vision of the company. With excellent organizational skills and a strong attention to detail, Danielle is committed to ensuring smooth operations and continued success at FMX.",
-    image: daniellaImg,
-  },
-  {
-    id: 3,
     name: "Hitoshi Akazawa",
     title: "Chief Financial Officer",
     description:
       "Mr. Akazawa, serving as the chief accounting officer at Precious Accounting, possesses comprehensive expertise in Japan's taxation, auditing, and regulatory compliance frameworks. He directs a cadre of adept accountants with a focus on tax consultancy. The breadth of Mr. Akazawa's proficiency is a cornerstone of FMX's triumphs, extending its influence and operational excellence beyond the Japanese market to the global stage.",
     image: hitoshiImg,
+  },
+  {
+    id: 3,
+    name: "Daniella Toka",
+    title: "Assistant to the Director",
+    description:
+      "Danielle is the assistant to the director and supporting him in all aspects of his work. As a Melbourne graduate in Global Studies and Law, she brings a wealth of knowledge and expertise to her role. This allows her to engage effectively with diverse teams around the world and contribute to the vision of the company. With excellent organizational skills and a strong attention to detail, Danielle is committed to ensuring smooth operations and continued success at FMX.",
+    image: daniellaImg,
   },
   {
     id: 4,

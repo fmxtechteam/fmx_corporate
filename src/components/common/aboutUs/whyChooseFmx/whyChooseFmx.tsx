@@ -12,7 +12,7 @@ export const WhyChooseFmx = () => {
         </div>
       </div>
       <div>
-        <div className=" mb-[6.2rem] pt-6 md:pt-10 grid md:grid-cols-2 justify-between md:gap-x-20 gap-y-[3.4rem] md:gap-y-[3.3rem]">
+        <div className=" mb-[6.2rem] pt-6 md:pt-10 grid md:grid-cols-2 justify-between gap-x-10 lg:gap-x-20 gap-y-[3.4rem] md:gap-y-[3.3rem]">
           {aboutUs.map(({ id, icon: Icon, title, description }) => (
             <div
               key={id}
