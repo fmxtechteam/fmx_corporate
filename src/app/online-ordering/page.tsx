@@ -13,7 +13,7 @@ const OnlineOrderingScreen = () => {
     <MainLayout>
       <OnlineOrdering />
       <Benefits />
-      <Testimonials />
+      {/* <Testimonials /> */}
       <Faqs faqs={faqs} />
       <GetInTouchSection />
     </MainLayout>

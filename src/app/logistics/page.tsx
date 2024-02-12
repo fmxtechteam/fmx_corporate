@@ -11,7 +11,7 @@ const Logistics = () => {
   return (
     <MainLayout>
       <LogisticsComponent />
-      <Testimonials />
+      {/* <Testimonials /> */}
       <Faqs faqs={faqs} className="!pt-[6.5rem]" />
       <GetInTouchSection />
     </MainLayout>
