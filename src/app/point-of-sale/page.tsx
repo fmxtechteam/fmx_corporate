@@ -13,7 +13,7 @@ const PointOfSale = () => {
     <MainLayout>
       <Pos />
       <Features />
-      <Testimonials className="!mb-20" />
+      {/* <Testimonials className="!mb-20" /> */}
       <Faqs faqs={faqs} className="!pt-20" />
       <GetInTouchSection />
     </MainLayout>
