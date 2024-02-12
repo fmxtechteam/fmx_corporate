@@ -26,7 +26,7 @@ export default function Home() {
         <SaleSolution />
         <VideoSection />
         <Faqs faqs={faqs} />
-        <Testimonials />
+        {/* <Testimonials /> */}
         <GetInTouchSection />
       </MainLayout>
     </RootLayout>
