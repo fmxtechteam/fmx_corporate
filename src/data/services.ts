@@ -2,26 +2,26 @@ import { Logistics, Ordering, PointOfSale } from "@/assets/icons";
 
 export const routes = [
   {
-    name: "Home",
+    name: "home",
     link: "/",
     id: 1,
   },
   {
-    name: "Services",
+    name: "services",
     id: 2,
   },
   {
-    name: "About us",
+    name: "about_us",
     link: "/about-us",
     id: 3,
   },
   {
-    name: "FAQs",
+    name: "faqs",
     link: "/faqs",
     id: 4,
   },
   {
-    name: "Contact us",
+    name: "contact_us",
     link: "/contact-us",
     id: 5,
   },
@@ -30,19 +30,19 @@ export const routes = [
 export const services = [
   {
     id: 1,
-    text: "Point of sale",
+    text: "point_of_sales",
     icon: PointOfSale,
     link: "point-of-sale",
   },
   {
     id: 2,
-    text: "Online ordering",
+    text: "online_ordering",
     icon: Ordering,
     link: "online-ordering",
   },
   {
     id: 3,
-    text: "Logistics",
+    text: "logistics",
     icon: Logistics,
     link: "logistics",
   },

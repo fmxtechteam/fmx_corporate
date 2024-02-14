@@ -1,3 +1,4 @@
+'use client'
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Fragment } from "react";
@@ -5,6 +6,8 @@ import { Fragment } from "react";
 import { ArrowDown, ButtonArrow } from "@/assets/icons";
 import { languages, routes, services } from "@/data";
 import { Menu, Transition } from "@headlessui/react";
+import LanguageChanger from "@/components/layouts/LanguageChanger";
+import { useTranslation } from "react-i18next";
 
 export const MobileNav = ({
   isOpen,
@@ -14,13 +17,12 @@ export const MobileNav = ({
   setIsOpen: (value: boolean) => void;
 }) => {
   const current = usePathname();
-
+  const { t } = useTranslation();
   return (
     <aside className="relative">
       <section
-        className={`fixed top-5 sm:-top-6 z-[-1] right-0 sm:px-4  h-screen w-screen transform transition-transform duration-500 ease-out ${
-          isOpen ? "" : "-translate-y-full"
-        }`}
+        className={`fixed top-5 sm:-top-6 z-[-1] right-0 sm:px-4  h-screen w-screen transform transition-transform duration-500 ease-out ${isOpen ? "" : "-translate-y-full"
+          }`}
       >
         <div className="bg-white w-full h-[85vh]    right-0  top-0 bottom-0 absolute ">
           <div className="w-64 h-96 mt-20 px-[3%]  sm:px-[3%]">
@@ -30,11 +32,10 @@ export const MobileNav = ({
                   {item.link && (
                     <Link
                       href={item.link ?? ""}
-                      className={`text-gray-primary/60 relative text-[17px] font-normal py-4 rounded-[4px]  transition-all w-max ${
-                        current === item.link && "!text-gray-primary"
-                      }`}
+                      className={`text-gray-primary/60 relative text-[17px] font-normal py-4 rounded-[4px]  transition-all w-max ${current === item.link && "!text-gray-primary"
+                        }`}
                     >
-                      {item.name}
+                      {t(`navbar:${item.name}`)}
                       {current === item.link && (
                         <div className="w-full h-[2.6px] bg-primary absolute bottom-1 rounded-full" />
                       )}
@@ -52,11 +53,10 @@ export const MobileNav = ({
                                     className={"flex items-center space-x-1"}
                                   >
                                     <div
-                                      className={`cursor-pointer text-gray-primary/60 ${
-                                        open && "text-gray-primary"
-                                      }`}
+                                      className={`cursor-pointer text-gray-primary/60 ${open && "text-gray-primary"
+                                        }`}
                                     >
-                                      {item.name}
+                                      {t(`navbar:${item.name}`)}
                                     </div>
                                     {open ? (
                                       <ArrowDown className="-ml-0 rotate-180 cursor-pointer" />
@@ -85,14 +85,13 @@ export const MobileNav = ({
                                             <Menu.Item>
                                               {({ active }) => (
                                                 <Link
-                                                  className={`w-full flex space-x-2 items-center bg-gray/50 font-medium ${
-                                                    active && ""
-                                                  }`}
+                                                  className={`w-full flex space-x-2 items-center bg-gray/50 font-medium ${active && ""
+                                                    }`}
                                                   href={link}
                                                 >
                                                   <Icon className="w-10 h-10" />
                                                   <p className="w-fit text-gray-primary/50 text-[15px]">
-                                                    {text}
+                                                    {t(`navbar:${text}`)}
                                                   </p>
                                                   <ButtonArrow className="hover:text-gray/50 w-4 h-4" />
                                                 </Link>
@@ -129,7 +128,7 @@ export const MobileNav = ({
           </div>
         </div>
         <div className="absolute top-16 sm:top-[7rem] right-5 sm:right-4">
-          <Menu>
+          {/* <Menu>
             {({ open }) => (
               <>
                 <Menu.Button className={"flex items-center space-x-1"}>
@@ -175,7 +174,10 @@ export const MobileNav = ({
                 </Menu.Items>
               </>
             )}
-          </Menu>
+          </Menu> */}
+          <div className=" lg:hidden block">
+            <LanguageChanger />
+          </div>
         </div>
       </section>
     </aside>
