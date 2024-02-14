@@ -13,10 +13,19 @@ import {
   VideoSection,
 } from "@/components";
 import RootLayout from "./layout";
+import TranslationsProvider from "@/components/TranslationsProvider";
+import initTranslations from "../i18n";
+import async from './page';
 
-export default function Home() {
+const namespaces = ['home', 'navbar'];
+const Home = async ({ params: { locale } }: {
+  params: {
+    locale: string
+  }
+}) => {
+  const { t, resources } = await initTranslations(locale, namespaces);
   return (
-    <RootLayout>
+    <TranslationsProvider locale={locale} resources={resources} namespaces={namespaces} >
       <MainLayout>
         <Showcase />
         <SuccessStory />
@@ -29,6 +38,7 @@ export default function Home() {
         {/* <Testimonials /> */}
         <GetInTouchSection />
       </MainLayout>
-    </RootLayout>
+    </TranslationsProvider>
   );
 }
+export default Home;

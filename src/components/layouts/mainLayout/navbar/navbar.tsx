@@ -10,31 +10,32 @@ import { languages, routes, services } from "@/data";
 import { MobileNav } from "./mobileNav/mobileNav";
 import Image from "next/image";
 import logo from "@/assets/images/logo2.png";
+import LanguageChanger from "../../LanguageChanger";
+import { useTranslation } from "react-i18next";
 
 export const Navbar = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
   const current = usePathname();
-
+  const { t } = useTranslation();
   return (
     <>
       <header className="bg-white shadow-[0px_1px_4px_0px_#0000000D] w-full">
-        <div className="flex lg:space-x-[115px] px-[3%] sm:px-0 items-center max-w-[70.6rem] mx-auto pt-[8px] pb-[10px]">
+        <div className="flex lg:space-x-[100px] px-[3%] sm:px-0 items-center max-w-[80rem] mx-auto pt-[8px] pb-[10px] justify-between">
           <Link href="/" className="flex-grow my-[9.2px]">
             <Image src={logo} alt="Company Logo" className="!w-[60px]" />
           </Link>
           <nav className="hidden xl:block">
-            <ul className="flex space-x-[45px] text-dark/50 font-semibold tracking-wider text-[14px] transition-all duration-300">
+            <ul className="flex gap-10 text-dark/50 font-semibold tracking-wider text-[14px] transition-all duration-300">
               {routes.map((route) => (
                 <li
                   key={route.id}
-                  className={`flex items-center justify-center ${
-                    current === route.link ? " text-dark" : ""
-                  }`}
+                  className={`flex items-center justify-center ${current === route.link ? " text-dark" : ""
+                    }`}
                 >
                   {current === route.link && (
                     <div className="w-[2.5rem] h-[2.6px] bg-primary/60 absolute bottom-0 rounded-full" />
                   )}
-                  {route.link && <Link href={route.link}>{route.name}</Link>}
+                  {route.link && <Link href={route.link}>{t(`navbar:${route.name}`)}</Link>}
                   {!route.link && (
                     <>
                       {route.id === 2 && (
@@ -45,7 +46,7 @@ export const Navbar = () => {
                                 className={"flex items-center space-x-1"}
                               >
                                 <div className="cursor-pointer">
-                                  {route.name}
+                                  {t(`navbar:${route.name}`)}
                                 </div>
                                 <ArrowDown className="-ml-0 cursor-pointer" />
                               </Menu.Button>
@@ -69,13 +70,12 @@ export const Navbar = () => {
                                         <Menu.Item>
                                           {({ active }) => (
                                             <Link
-                                              className={`w-full flex space-x-8 items-center bg-gray/50 font-medium ${
-                                                active && ""
-                                              }`}
+                                              className={`w-full flex space-x-8 items-center bg-gray/50 font-medium ${active && ""
+                                                }`}
                                               href={link}
                                             >
                                               <Icon className="w-10 h-10" />
-                                              {text}
+                                              {t(`navbar:${text}`)}
                                               <ButtonArrow className="hover:text-gray/50 w-8 h-8" />
                                             </Link>
                                           )}
@@ -107,14 +107,14 @@ export const Navbar = () => {
               ))}
             </ul>
           </nav>
-          <div className="flex space-x-4">
-            <div className="text-dark/50 hidden text-sm font-medium md:flex items-center space-x-2 lg:space-x-px">
+          <div className="flex space-x-4 items-center">
+            {/* <div className="text-dark/50 hidden text-sm font-medium md:flex items-center space-x-2 lg:space-x-px">
               <div className="">
                 <Menu>
                   {({ open }) => (
                     <>
                       <Menu.Button className={"flex items-center space-x-1"}>
-                        <div className="cursor-pointer font-medium">{"EN"}</div>
+                        <div className="cursor-pointer font-medium">{"JP"}</div>
                         {open ? (
                           <ArrowDown className="ml-1 rotate-180 cursor-pointer" />
                         ) : (
@@ -126,7 +126,7 @@ export const Navbar = () => {
                           "absolute !z-[80] top-14 rounded-[4px] shadow-[0px_2px_4px_0px_#00000026] space-y-8 py-4 pl-5 pr-1 bg-white -ml-6"
                         }
                       >
-                        {languages.map(({ id, language }) => (
+                        {languages.map(({ id, language, local }) => (
                           <div className="block" key={id}>
                             <Transition
                               as={Fragment}
@@ -141,12 +141,9 @@ export const Navbar = () => {
                               <Menu.Item>
                                 {({ active }) => (
                                   <div
-                                    className={`w-full cursor-pointer  flex space-x-8 items-center text-gray-primary/70 font-normal ${
-                                      active && ""
-                                    }`}
-                                  >
-                                    {language}
-                                    <ButtonArrow className="hover:text-gray/50 w-4 h-4" />
+                                    className={`w-full cursor-pointer  flex space-x-8 items-center text-gray-primary/70 font-normal ${active && ""
+                                      }`}
+                                  >{language}
                                   </div>
                                 )}
                               </Menu.Item>
@@ -158,29 +155,31 @@ export const Navbar = () => {
                   )}
                 </Menu>
               </div>
+            </div> */}
+            <div className=" lg:block hidden">
+              <LanguageChanger />
             </div>
             <div className="flex space-x-2 lg:space-x-4  items-center">
               <Button
                 link={"/login"}
-                title="Login"
+                title={t('navbar:user_login')}
                 className="!bg-transparent border !py-[8px] md:!py-[9.6px]  !border-primary !text-primary"
               />
               <Button
                 link={"/register"}
+                title={t('navbar:register')}
                 className="mr-2 lg:mr-0  !py-[8px] md:!py-[9.6px]"
               />
               <button
-                className={`w-10  flex justify-center ${
-                  isOpen === true ? "hidden" : ""
-                } cursor-pointer transition-all duration-300`}
+                className={`w-10  flex justify-center ${isOpen === true ? "hidden" : ""
+                  } cursor-pointer transition-all duration-300`}
                 onClick={() => setIsOpen((c) => !c)}
               >
                 <Hamburger className={`xl:hidden cursor-pointer`} />
               </button>
               <button
-                className={`w-10 flex justify-center xl:hidden ${
-                  !isOpen ? "hidden" : ""
-                } cursor-pointer transition-all duration-300`}
+                className={`w-10 flex justify-center xl:hidden ${!isOpen ? "hidden" : ""
+                  } cursor-pointer transition-all duration-300`}
                 onClick={() => setIsOpen((c) => !c)}
               >
                 <CancelIcon className="fill-current text-dark cursor-pointer w-5 h-5" />
