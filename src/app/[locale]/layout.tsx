@@ -2,7 +2,8 @@ import { ReactNode } from "react";
 import { StaticImageData } from "next/image";
 import "./globals.css";
 import { dir } from 'i18next';
-import { i18nConfig } from "@/i18nConfig";
+import i18nConfig from "@/i18nConfig";
+
 
 export const metadata: IMetaData = {
   title: "Home FMX",
