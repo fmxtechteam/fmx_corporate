@@ -14,9 +14,9 @@ import {
 } from "@/components";
 import TranslationsProvider from "@/components/TranslationsProvider";
 import initTranslations from "../i18n";
-import async from './page';
 
-const namespaces = ['home', 'navbar'];
+
+const namespaces = ['home', 'navbar', 'common', 'footer'];
 const Home = async ({ params: { locale } }: {
   params: {
     locale: string

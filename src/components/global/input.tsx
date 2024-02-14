@@ -1,15 +1,18 @@
+'use client';
 import { IInput } from "@/interfaces";
 import { Circle, InputArrowRight, SearchIcon } from "@/assets/icons";
+import { useTranslation } from "react-i18next";
 
 export const Input: React.FC<IInput> = ({
   className,
-  placeholder = "Enter your Email here",
+  placeholder = 'common:enter_your_email_here',
   label,
   labelClassName,
   inputContainer,
   type = "text",
   faqs = false,
 }) => {
+  const { t } = useTranslation();
   return (
     <>
       <label
@@ -19,11 +22,10 @@ export const Input: React.FC<IInput> = ({
         {label}
       </label>
       <div
-        className={`flex items-center outline-0 ${
-          faqs
-            ? "w-[90%] md:w-[25.6rem] border-gray-primary/20 h-[52px]"
-            : "md:w-[24.2rem] border-gray-primary/25 justify-between h-14 "
-        }  border-2 py-3 my-8  relative rounded-full  ${inputContainer}`}
+        className={`flex items-center outline-0 ${faqs
+          ? "w-[90%] md:w-[25.6rem] border-gray-primary/20 h-[52px]"
+          : "md:w-[24.2rem] border-gray-primary/25 justify-between h-14 "
+          }  border-2 py-3 my-8  relative rounded-full  ${inputContainer}`}
       >
         {faqs && (
           <div className=" h-min cursor-pointer ml-4">
@@ -33,12 +35,11 @@ export const Input: React.FC<IInput> = ({
         <input
           id="input"
           type={type}
-          className={`-mt-[.1rem] outline-0 border-0 align-middle place-content-start  bg-transparent font-medium text-gray-primary/50 ${
-            faqs
-              ? "placeholder:text-gray-primary/30 pl-2 pr-4"
-              : "placeholder:text-gray-primary/50 px-4"
-          } text-[16.5px] leading-[28px] ${className}`}
-          placeholder={placeholder}
+          className={`-mt-[.1rem] outline-0 border-0 align-middle place-content-start  bg-transparent font-medium text-gray-primary/50 ${faqs
+            ? "placeholder:text-gray-primary/30 pl-2 pr-4"
+            : "placeholder:text-gray-primary/50 px-4"
+            } text-[16.5px] leading-[28px] ${className}`}
+          placeholder={t(`${placeholder}`)}
         />
         {!faqs && (
           <div className="relative h-min cursor-pointer -ml-4">

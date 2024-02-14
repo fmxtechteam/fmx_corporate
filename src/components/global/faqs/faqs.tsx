@@ -1,5 +1,7 @@
+'use client';
 import { IFaqs } from "@/interfaces";
 import { DisclosureComponent } from "./disclosureComponent/disclosureComponent";
+import { useTranslation } from "react-i18next";
 
 export const Faqs: React.FC<IFaqs> = ({
   className,
@@ -10,13 +12,13 @@ export const Faqs: React.FC<IFaqs> = ({
   asideClassName,
   faqs,
 }) => {
+  const { t } = useTranslation();
   return (
     <div
-      className={`md:mx-auto mb-[5.8rem] pt-9  w-full flex md:text-center  md:justify-center ${
-        asideContent
-          ? `items-start flex-col md:flex-row  md:space-x-20 px-[3%] sm:px-4 md:px-0 ${asideClassName}  -mt-1`
-          : "items-center px-[3%] sm:px-4"
-      }  ${className}`}
+      className={`md:mx-auto mb-[5.8rem] pt-9  w-full flex md:text-center  md:justify-center ${asideContent
+        ? `items-start flex-col md:flex-row  md:space-x-20 px-[3%] sm:px-4 md:px-0 ${asideClassName}  -mt-1`
+        : "items-center px-[3%] sm:px-4"
+        }  ${className}`}
     >
       {asideContent && (
         <div className="mt-[3.3rem] !-mb-5 md:min-w-fit">
@@ -29,12 +31,12 @@ export const Faqs: React.FC<IFaqs> = ({
         <big
           className={` ${titleClassName} uppercase text-base md:text-[15.6px] font-medium`}
         >
-          {"Frequently asked questions"}
+          {t('faqs_heading')}
         </big>
         <h2
           className={` ${descriptionClassName} text-[28px] md:text-[37px] max-w-sm md:max-w-none -tracking-[0.010em] font-medium my-4`}
         >
-          {"Don’t hesitate to reach out to us for more inquiry"}
+          {t('faqs_sub_heading')}
         </h2>
         <div className="min-w-screen mt-4 lg:min-w-full lg:flex justify-center md:-mt-[30px]">
           <DisclosureComponent

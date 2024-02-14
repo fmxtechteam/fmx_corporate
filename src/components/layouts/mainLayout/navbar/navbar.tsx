@@ -108,54 +108,6 @@ export const Navbar = () => {
             </ul>
           </nav>
           <div className="flex space-x-4 items-center">
-            {/* <div className="text-dark/50 hidden text-sm font-medium md:flex items-center space-x-2 lg:space-x-px">
-              <div className="">
-                <Menu>
-                  {({ open }) => (
-                    <>
-                      <Menu.Button className={"flex items-center space-x-1"}>
-                        <div className="cursor-pointer font-medium">{"JP"}</div>
-                        {open ? (
-                          <ArrowDown className="ml-1 rotate-180 cursor-pointer" />
-                        ) : (
-                          <ArrowDown className="ml-1 cursor-pointer" />
-                        )}
-                      </Menu.Button>
-                      <Menu.Items
-                        className={
-                          "absolute !z-[80] top-14 rounded-[4px] shadow-[0px_2px_4px_0px_#00000026] space-y-8 py-4 pl-5 pr-1 bg-white -ml-6"
-                        }
-                      >
-                        {languages.map(({ id, language, local }) => (
-                          <div className="block" key={id}>
-                            <Transition
-                              as={Fragment}
-                              show={open}
-                              enter="transition ease-out duration-100"
-                              enterFrom="transform opacity-0 scale-95"
-                              enterTo="transform opacity-100 scale-100"
-                              leave="transition ease-in duration-75"
-                              leaveFrom="transform opacity-100 scale-100"
-                              leaveTo="transform opacity-0 scale-95"
-                            >
-                              <Menu.Item>
-                                {({ active }) => (
-                                  <div
-                                    className={`w-full cursor-pointer  flex space-x-8 items-center text-gray-primary/70 font-normal ${active && ""
-                                      }`}
-                                  >{language}
-                                  </div>
-                                )}
-                              </Menu.Item>
-                            </Transition>
-                          </div>
-                        ))}
-                      </Menu.Items>
-                    </>
-                  )}
-                </Menu>
-              </div>
-            </div> */}
             <div className=" lg:block hidden">
               <LanguageChanger />
             </div>
