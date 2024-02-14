@@ -12,7 +12,6 @@ import {
   Testimonials,
   VideoSection,
 } from "@/components";
-import RootLayout from "./layout";
 import TranslationsProvider from "@/components/TranslationsProvider";
 import initTranslations from "../i18n";
 import async from './page';
