@@ -1,4 +1,6 @@
+'use client';
 import { Star } from "@/assets/icons";
+import { useTranslation } from "react-i18next";
 
 export const Rating = ({
   countries = "Australia",
@@ -13,6 +15,7 @@ export const Rating = ({
   iconClassName?: string;
   ratingClassName?: string;
 }) => {
+  const { t } = useTranslation();
   return (
     <div className={` ${containerClassName} grid space-y-4`}>
       <div className="flex items-end mb-[2px]  space-x-[2.5px]">
@@ -27,7 +30,7 @@ export const Rating = ({
         <div
           className={` ${ratingClassName} text-base md:text-base font-bold tracking-wide md:-mt-2`}
         >
-          4.9 / 5 rating
+          4.9 / 5 {t("common:rating")}
         </div>
         <div
           className={`text-sm md:text-base leading-[31px] font-bold text-gray-primary/50 mt-2 md:mt-2.5 ${countriesClassName}`}
