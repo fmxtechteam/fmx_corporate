@@ -1,3 +1,4 @@
+'use client'
 import { Benefits } from "./benefits/benefits";
 import { OurTeam } from "./ourTeam/ourTeam";
 import { WhyChooseFmx } from "./whyChooseFmx/whyChooseFmx";

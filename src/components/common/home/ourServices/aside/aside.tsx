@@ -17,18 +17,6 @@ export const Aside = () => {
           {t('our_service_content2')}
         </div>
       </div>
-      <div className="md:flex space-x-[4.8rem] pt-[4rem] hidden">
-        <Rating
-          countries={t(`common:productivity`)}
-          containerClassName="!space-y-6"
-          countriesClassName="text-gray/60"
-        />
-        <Rating
-          countries={t(`common:efficiency`)}
-          containerClassName="!space-y-6"
-          countriesClassName="text-gray/60"
-        />
-      </div>
     </aside>
   );
 };

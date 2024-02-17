@@ -4,13 +4,13 @@ export const contactUs = [
   {
     id: 1,
     image: japanOffice,
-    address: "Level 1, 340 Keilor Road Niddrie, Melbourne, Victoria 3042",
-    country: "Australia Office",
+    address: "contactUS_address1",
+    country: "contactUS_country1",
   },
   {
     id: 1,
     image: australianOffice,
-    address: "N&E BLD, Level 6, Ginza, 1-chome 12-4, Chuo-ku, Tokyo",
-    country: "Japan Office",
+    address: "contactUS_address2",
+    country: "contactUS_country2",
   },
 ];

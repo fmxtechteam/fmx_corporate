@@ -1,14 +1,15 @@
+'use client'
 import Image from "next/image";
 
 import { IServiceShowcase } from "@/interfaces";
 import { Button, Input } from "@/components";
 import { aboutUsShowcaseImg, videoScreen, youtube } from "@/constant/imgs";
+import { useTranslation } from "react-i18next";
 
 export const ShowcaseBanner: React.FC<IServiceShowcase> = ({
   title = "Transporting Produce Made easier ",
   className,
   icon: Icon,
-  iconClassName,
   bg = "bg-[url('/images/logistics-banner.png')]",
   pos = false,
   containerClassName,
@@ -17,17 +18,19 @@ export const ShowcaseBanner: React.FC<IServiceShowcase> = ({
   aboutUsImg = false,
   faqs = false,
   buttonClassName,
-  description = `Buying and selling produce at the epping wholesale market made easier, we’ve got all your needs covered.`,
+  description = `Buying and selling produce at the Japan's wholesale market made easier, we’ve got all your needs covered.`,
+  aboutText = false,
 }) => {
+  const { t } = useTranslation();
   return (
     <div className="relative">
       <main
         className={`z-40 ${bg} ${containerClassName} px-[3%] sm:px-4 md:px-0 bg-no-repeat relative bg-cover w-full  pb-2 rounded-b-[32px]`}
       >
         <section className="md:max-w-[70.6rem] text-center flex flex-col items-center font-sans pt-[4.8rem] mx-auto max-w-lg">
-          <Icon
-            className={`w-[8rem] md:w-[6.9rem] mb-5 md:mb-2 ${iconClassName}`}
-          />
+          {
+            aboutText && <h2 className="px-3 py-1 text-primary border-gray-300 border rounded-md shadow-md">{aboutText}</h2>
+          }
           <div
             className={`text-3xl md:text-[52px] max-w-[33rem] md:leading-[80px] font-medium mt-2 ${className}`}
           >
@@ -42,14 +45,14 @@ export const ShowcaseBanner: React.FC<IServiceShowcase> = ({
             <div className="flex items-center justify-center md:space-x-1 mb-16 mt-10 md:mt-[3.8rem]">
               <Button
                 link={"/login"}
-                title="Get Started Free"
+                title={t("common:get_started_free")}
                 className={`${buttonClassName} sm:!px-[2rem] lg:!px-[4.4rem] py-[.9rem] md:py-[.9rem] !text-[13px] md:!text-[16px] md:!rounded-[16px] !px-[2rem] !container !flex-grow`}
                 icon={true}
                 iconClassName="!text-2xl"
               />
               <Button
                 link={"/contact-us"}
-                title="Talk to Support"
+                title={t("common:talk_to_support")}
                 className="!bg-transparent !normal-case  !text-[13px] md:!text-[17px] md:!py-[7px]  !text-primary underline"
               />
             </div>
@@ -96,7 +99,7 @@ export const ShowcaseBanner: React.FC<IServiceShowcase> = ({
       {faqs && (
         <Input
           faqs={true}
-          placeholder="Search for questions here..."
+          placeholder={t("faqs:search_faqs")}
           inputContainer="!rounded-md bg-white !border border-gray-primary/40 absolute z-40 mt-2 max-w-xl  bottom-[10.8rem] md:bottom-[9.3rem]  mx-auto"
         />
       )}

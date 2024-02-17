@@ -10,25 +10,29 @@ export const serviceFeatures = [
   {
     id: 1,
     image: features1,
-    title: "Sales Management",
+    title: "features_title1",
     icon: CoinHand,
+    description: "features_content1",
   },
   {
     id: 2,
     image: features2,
-    title: "Inventory Management",
+    title: "features_title2",
     icon: InventoryManagement,
+    description: "features_content2",
   },
   {
     id: 1,
     image: features3,
-    title: "Customers Management",
+    title: "features_title3",
     icon: CustomerManagement,
+    description: "features_content3",
   },
   {
     id: 1,
     image: features4,
-    title: "Live Chat Support",
+    title: "features_title4",
     icon: Support,
+    description: "features_content4",
   },
 ];
