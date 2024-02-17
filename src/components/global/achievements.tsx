@@ -1,6 +1,9 @@
+'use client'
 import { achievements } from "@/data";
+import { useTranslation } from "react-i18next";
 
 export const Achievements = () => {
+  const { t } = useTranslation();
   return (
     <section className="bg-secondary z-40">
       <div className="text-white py-[4.4rem] md:pb-[3.8rem] md:pt-[6.9rem] -mt-3 w-full grid grid-cols-2 gap-14 md:flex md:max-w-[70.6rem] mx-auto px-[3%] sm:px-0 justify-center  md:justify-between">
@@ -10,7 +13,7 @@ export const Achievements = () => {
               {count}
             </h1>
             <p className="text-sm md:text-[15px] pt-3 md:pt-6 font-medium capitalize">
-              {description}
+              {t(`common:${description}`)}
             </p>
           </div>
         ))}

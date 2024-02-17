@@ -4,16 +4,16 @@ export const features = [
   {
     id: 1,
     icon: ShoppingCart,
-    title: "Fast and Reliable Delivery",
+    title: "title1",
   },
   {
     id: 2,
     icon: Tracking,
-    title: "Real-time Tracking",
+    title: "title2",
   },
   {
     id: 3,
     icon: Transportation,
-    title: "Cost-Effective Transportation",
+    title: "title3",
   },
 ];

@@ -8,7 +8,7 @@ export const Faqs: React.FC<IFaqs> = ({
   descriptionClassName,
   titleClassName,
   asideContent = false,
-  asideTitle = "General",
+  asideTitle = "general",
   asideClassName,
   faqs,
 }) => {
@@ -23,7 +23,7 @@ export const Faqs: React.FC<IFaqs> = ({
       {asideContent && (
         <div className="mt-[3.3rem] !-mb-5 md:min-w-fit">
           <h2 className="font-medium text-[26px] text-gray-primary/75 ">
-            {asideTitle}
+            {t(`faqs:${asideTitle}`)}
           </h2>
         </div>
       )}

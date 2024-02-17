@@ -12,4 +12,5 @@ export interface IServiceShowcase {
   faqs?: boolean;
   aboutUsImg?: boolean;
   buttonClassName?: string;
+  aboutText?: string;
 }

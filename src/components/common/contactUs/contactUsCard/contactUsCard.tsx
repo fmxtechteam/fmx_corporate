@@ -1,6 +1,8 @@
+"use client";
 import Image, { StaticImageData } from "next/image";
 
 import { Button } from "@/components";
+import { useTranslation } from "react-i18next";
 
 export const ContactUsCard = ({
   image,
@@ -11,6 +13,7 @@ export const ContactUsCard = ({
   country: string;
   address: string;
 }) => {
+  const { t } = useTranslation();
   return (
     <div className="items-center md:ml-10  max-w-[94.8%]">
       <div className="z-[-1]">
@@ -26,14 +29,14 @@ export const ContactUsCard = ({
           <div className="md:flex pt-[3.7rem] bg- items-start justify-between  mb-40   text-white p-6">
             <div>
               <div className="text-xl leading-[28px]  md:text-2xl pb-5 -mt-[5px] font-medium ">
-                {country}
+                {t(`contactUs:${country}`)}
               </div>
               <div className="text-2xl md:text-[25px] leading-[45px] !min-w-[20rem] text-gray/75 max-w-sm md:leading-[28px] -mt-[5px] font-medium ">
-                {address}
+                {t(`contactUs:${address}`)}
               </div>
               <Button
                 link={"https://www.google.com/maps"}
-                title="Use Google Map"
+                title={t("common:use_google_map")}
                 className="sm:!px-[1rem] mt-[42px] flex !justify-center md:justify-start w-full hover:!bg-primary md:!px-[2.9rem] mb-10 md:mb-9 md:!w-fit md:!py-[.9rem] !bg-transparent !text-white !border-white !border !text-[16px] !rounded-[8px] !px-[1rem] !py-[16px] !container !flex-grow"
                 icon={true}
                 iconClassName="!text-2xl"
@@ -41,7 +44,7 @@ export const ContactUsCard = ({
             </div>
             <div className="grid md:grid-cols-2 md:gap-20 gap-10 -mt-2">
               <div className="text-xl leading-[28px]  md:text-2xl pb-5 -mt-[5px] font-medium ">
-                {` Mail us `}
+                {t("contactUs:contactUS_mail_us")}
                 <nav className="mt-3">
                   <ul className=" text-base font-medium space-y-1">
                     <li className=" hover:text-primary hover:underline text-gray/50 cursor-pointer transition duration-300">
@@ -54,7 +57,7 @@ export const ContactUsCard = ({
                 </nav>
               </div>
               <div className="text-xl leading-[28px]  md:text-2xl pb-5 -mt-[5px] font-medium ">
-                {"Call us"}
+                {t("contactUs:contactUS_call_us")}
                 <nav className="mt-3">
                   <ul className=" text-base font-medium space-y-2">
                     <li className=" hover:text-primary hover:underline text-gray/50 cursor-pointer transition duration-300">

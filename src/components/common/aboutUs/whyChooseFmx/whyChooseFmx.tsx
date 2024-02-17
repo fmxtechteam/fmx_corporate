@@ -1,14 +1,17 @@
+'use client'
 import { aboutUs } from "@/data";
+import { useTranslation } from "react-i18next";
 
 export const WhyChooseFmx = () => {
+  const { t } = useTranslation();
   return (
     <div className="sm:px-0 px-[3%] max-w-[70.6rem] mx-auto -mt-[5rem] md:-mt-[2.8rem]">
       <div className="flex flex-col text-lg md:text-[15.7px] items-center font-medium w-full mb-6">
-        <h3>WHY CHOOSE FMX</h3>
+        <h3>{t('aboutUs:whychoosefmx_title')}</h3>
         <div
           className={`text-3xl max-w-sm md:text-[36px] md:max-w-[34rem] text-center md:leading-[55px] font-medium mt-4 md:mt-2`}
         >
-          Experience ease in trading with support and technology
+          {t('aboutUs:whychoosefmx_description')}
         </div>
       </div>
       <div>
@@ -22,10 +25,10 @@ export const WhyChooseFmx = () => {
                 <Icon className="w-14 md:w-14" />
               </div>
               <h1 className="font-medium py-2  md:py-[3px] text-lg md:text-[26px] mt-6 mb-3">
-                {title}
+                {t(`aboutUs:${title}`)}
               </h1>
               <p className="text-[17px] pb-4 md:pb-0 md:pt-[3px] md:text-[16.5px] leading-[28.5px] font-normal text-gray/70">
-                {description}
+                {`${t(`aboutUs:${description}`)}`}
               </p>
             </div>
           ))}

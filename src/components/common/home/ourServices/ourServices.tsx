@@ -27,22 +27,6 @@ export const OurServices = () => {
             </div>
           ))}
         </div>
-        <div className="md:hidden space-x-10 md:space-x-[4.8rem] pt-[4rem] flex pb-16 md:pb-0">
-          <Rating
-            countries="Productivity"
-            iconClassName="!w-[20px] !h-[18px] "
-            containerClassName="!space-y-3 !text-white !text-xs"
-            countriesClassName="text-gray/60 !text-xs"
-            ratingClassName="!text-[15px]"
-          />
-          <Rating
-            countries="Efficiency"
-            iconClassName="!w-[20px] !h-[18px] "
-            containerClassName="!space-y-3 !text-white !text-xs"
-            countriesClassName="text-gray/60 !text-xs"
-            ratingClassName="!text-[15px]"
-          />
-        </div>
       </section>
     </main>
   );

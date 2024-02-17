@@ -9,23 +9,23 @@ export const onlineOrdering = [
   {
     id: 1,
     image: OnlineOrdering1,
-    title: "CONVENIENCE",
+    title: "title1",
   },
   {
     id: 2,
     image: OnlineOrdering2,
-    title: "FRESH PRODUCE",
+    title: "title2",
   },
   {
     id: 3,
     image: OnlineOrdering3,
     order: 1,
-    title: "EASY PAYMENTS",
+    title: "title3",
   },
   {
     id: 4,
     image: OnlineOrdering4,
-    title: "FAST DELIVERY",
+    title: "title4",
   },
   // {
   //   id: 4,

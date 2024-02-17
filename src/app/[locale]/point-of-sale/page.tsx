@@ -7,16 +7,25 @@ import {
   Pos,
   Testimonials,
 } from "@/components";
-
-const PointOfSale = () => {
+import initTranslations from "@/app/i18n";
+import TranslationsProvider from "@/components/TranslationsProvider";
+const namespaces = ['home', 'navbar', 'common', 'footer', 'aboutUs', 'faqs', 'point_of_sale'];
+const PointOfSale = async ({ params: { locale } }: {
+  params: {
+    locale: string
+  }
+}) => {
+  const { t, resources } = await initTranslations(locale, namespaces);
   return (
-    <MainLayout>
-      <Pos />
-      <Features />
-      {/* <Testimonials className="!mb-20" /> */}
-      <Faqs faqs={faqs} className="!pt-20" />
-      <GetInTouchSection />
-    </MainLayout>
+    <TranslationsProvider locale={locale} resources={resources} namespaces={namespaces} >
+      <MainLayout>
+        <Pos />
+        <Features />
+        {/* <Testimonials className="!mb-20" /> */}
+        <Faqs faqs={faqs} className="!pt-20" />
+        <GetInTouchSection />
+      </MainLayout>
+    </TranslationsProvider>
   );
 };
 
