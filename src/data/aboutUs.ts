@@ -45,13 +45,6 @@ export const aboutUs = [
 export const aboutUsCard = [
   {
     id: 1,
-    title: "ourTeam_team_title1",
-    description: "ourTeam_team_description1",
-    image: nicholasImg,
-    name: "Nicholas Gangemi",
-  },
-  {
-    id: 2,
     name: "Hitoshi Akazawa",
     title: "ourTeam_team_title2",
     description: "ourTeam_team_description2",
@@ -59,16 +52,23 @@ export const aboutUsCard = [
   },
   {
     id: 3,
-    name: "Daniella Toka",
-    title: "ourTeam_team_title3",
-    description: "ourTeam_team_description3",
-    image: daniellaImg,
-  },
-  {
-    id: 4,
     name: "Tolulope Ogunleye",
     title: "ourTeam_team_title4",
     description: "ourTeam_team_description4",
     image: tolulopeImg,
+  },
+  {
+    id: 2,
+    title: "ourTeam_team_title1",
+    description: "ourTeam_team_description1",
+    image: nicholasImg,
+    name: "Nicholas Gangemi",
+  },
+  {
+    id: 4,
+    name: "Daniella Toka",
+    title: "ourTeam_team_title3",
+    description: "ourTeam_team_description3",
+    image: daniellaImg,
   },
 ];

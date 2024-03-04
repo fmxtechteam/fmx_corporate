@@ -18,7 +18,7 @@ export const ShowcaseBanner: React.FC<IServiceShowcase> = ({
   aboutUsImg = false,
   faqs = false,
   buttonClassName,
-  description = `Buying and selling produce at the Japan's wholesale market made easier, we’ve got all your needs covered.`,
+  description,
   aboutText = false,
 }) => {
   const { t } = useTranslation();
@@ -96,13 +96,13 @@ export const ShowcaseBanner: React.FC<IServiceShowcase> = ({
           </div>
         </>
       )}
-      {faqs && (
+      {/* {faqs && (
         <Input
           faqs={true}
           placeholder={t("faqs:search_faqs")}
           inputContainer="!rounded-md bg-white !border border-gray-primary/40 absolute z-40 mt-2 max-w-xl  bottom-[10.8rem] md:bottom-[9.3rem]  mx-auto"
         />
-      )}
+      )} */}
     </div>
   );
 };
