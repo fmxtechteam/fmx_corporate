@@ -14,7 +14,7 @@ const FaqsPage = async ({ params: { locale } }: {
     <TranslationsProvider locale={locale} resources={resources} namespaces={namespaces} >
       <MainLayout>
         <FaqsSection />
-        <div className={"!max-w-[70.6rem] mx-auto"}>
+        <div className={"!max-w-[70.6rem] mx-auto mt-20"}>
           <Faqs
             asideContent={true}
             className="!-mt-[7.2rem] md:!-mt-[6.7rem]"

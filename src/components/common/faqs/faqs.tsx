@@ -15,7 +15,8 @@ export const FaqsSection = () => {
       iconClassName="w-[9rem] hidden"
       bg="md:bg-[url('/images/faqs-banner-md.png')] bg-[url('/images/faqs-banner.png')]"
       containerClassName="!overflow-hidden !h-[28rem] md:!h-[30rem] md:!w-full md:!bg-cover md:!rounded-b-[32px] !z-20"
-      description={t("faqs:faqs_sub_heading")}
+      // description={t("faqs:faqs_sub_heading")}
+
       descriptionClassName="!normal-case !text-[15.9px] !mt-9 !tracking-tighter !text-gray-primary/50"
     />
   );

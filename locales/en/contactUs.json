@@ -1,1 +1,10 @@
-{"contactUS_title":"Contact Us","contactUS_call_us":"Call us","contactUS_mail_us":"Mail us","contactUS_address1":"Level 1, 340 Keilor Road Niddrie, Melbourne, Victoria 3042","contactUS_address2":"N&E BLD, Level 6, Ginza, 1-chome 12-4, Chuo-ku, Tokyo","contactUS_country1":"Australia Office","contactUS_country2":"Japan Office","contactUS_sub_title":"Our team are always ready to help you out"}
+{
+  "contactUS_title": "Contact Us",
+  "contactUS_call_us": "Call us",
+  "contactUS_mail_us": "Mail us",
+  "contactUS_address1": "Level 1, 340 Keilor Road Niddrie, Melbourne, Victoria 3042",
+  "contactUS_address2": "Tensho Office Hamamatsucho Daimon 504, 2-7-17 Hamamatsucho, Minato-ku, Tokyo",
+  "contactUS_country1": "Australia Office",
+  "contactUS_country2": "Japan Office",
+  "contactUS_sub_title": "Our team are always ready to help you out"
+}
