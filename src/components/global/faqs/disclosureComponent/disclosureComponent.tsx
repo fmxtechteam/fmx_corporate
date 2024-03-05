@@ -29,7 +29,7 @@ export const DisclosureComponent: React.FC<IDisclosure> = ({
                 <Disclosure.Button className="transition duration-300 w-full">
                   <div className="flex w-full flex-grow text-start md:text-center justify-between py-1 lg:pt-0">
                     <span className="text-gray-primary text-lg   md:text-base text-medium tracking-wide max-w-[90%] md:max-w-none">
-                      {t(`${title}`)}
+                      {t(`privacy_policy:${title}`)}
                     </span>
                     {open ? (
                       <Minus className="-mt-1" />
@@ -39,7 +39,7 @@ export const DisclosureComponent: React.FC<IDisclosure> = ({
                   </div>
                 </Disclosure.Button>
                 <Disclosure.Panel className="pt-6  text-[18px] md:text-[16.1px] leading-[28.5px] md:font-medium text-gray-primary/50">
-                  {t(`${description}`)}
+                  {t(`privacy_policy:${description}`)}
                 </Disclosure.Panel>
               </div>
             )}

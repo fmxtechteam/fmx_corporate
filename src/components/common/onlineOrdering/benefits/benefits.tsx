@@ -8,7 +8,7 @@ export const Benefits = ({ aboutUs = false }: { aboutUs?: boolean }) => {
   const { t } = useTranslation();
   return (
     <div className="py-[5.8rem] bg  px-[3%] sm:px-0 max-w-[70.6rem] -mb-20 md:-mb-0 mx-auto">
-      {onlineOrdering.map(({ id, image, title }) => (
+      {onlineOrdering.map(({ id, image, title, description, content }) => (
         <div
           key={id}
           className="grid md:grid-cols-2 items-start gap-y-10 md:gap-y-0  gap-x-20 mb-[4.5rem]  md:mb-[5.5rem] justify-between"
@@ -21,10 +21,10 @@ export const Benefits = ({ aboutUs = false }: { aboutUs?: boolean }) => {
               {t(`online_ordering:${title}`)}
             </h2>
             <div className="text-2xl md:text-[2.3rem] font-medium leading-[1.6]">
-              {t(`online_ordering:description`)}
+              {t(`online_ordering:${content}`)}
             </div>
             <p className="max-w-[28.8rem] mt-[1.5rem] mb-[41px] md:mt-12 text-[18px] leading-[28.5px] font-normal text-gray-primary/50">
-              {t(`online_ordering:content`)}
+              {t(`online_ordering:${description}`)}
             </p>
             {aboutUs && (
               <Button
