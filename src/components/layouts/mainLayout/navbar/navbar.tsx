@@ -16,6 +16,7 @@ import { useTranslation } from "react-i18next";
 export const Navbar = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
   const current = usePathname();
+  console.log(current)
   const { t } = useTranslation();
   return (
     <>
@@ -29,10 +30,10 @@ export const Navbar = () => {
               {routes.map((route) => (
                 <li
                   key={route.id}
-                  className={`flex items-center justify-center ${current === route.link ? " text-dark" : ""
+                  className={`flex items-center justify-center ${current.includes(route.link as string) ? " text-dark" : ""
                     }`}
                 >
-                  {current === route.link && (
+                  {route?.link?.includes(current as string) && (
                     <div className="w-[2.5rem] h-[2.6px] bg-primary/60 absolute bottom-0 rounded-full" />
                   )}
                   {route.link && <Link href={route.link}>{t(`navbar:${route.name}`)}</Link>}
