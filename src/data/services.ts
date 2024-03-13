@@ -4,26 +4,26 @@ export const routes = [
   {
     name: "home",
     link: "/",
-    id: 1,
+    id: "/home",
   },
   {
     name: "services",
-    id: 2,
+    id: "services",
   },
   {
     name: "about_us",
     link: "/about-us",
-    id: 3,
+    id: "about-us",
   },
   {
     name: "faqs",
     link: "/faqs",
-    id: 4,
+    id: "faqs",
   },
   {
     name: "contact_us",
     link: "/contact-us",
-    id: 5,
+    id: "contact-us",
   },
 ];
 
