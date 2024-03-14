@@ -1,20 +1,23 @@
 'use client';
+import { Fade } from "react-awesome-reveal";
 import { useTranslation } from "react-i18next";
 
 export const SuccessStory = () => {
   const { t } = useTranslation();
   return (
     <section className="md:mx-10">
-      <div className="md:bg-[url('/images/successStory.png')] bg-no-repeat  bg-contain sm:text-center  px-[3%] sm:px-4 flex justify-center flex-col md:mb-[15.1rem] sm:-mt-58  w-full h-[60vh] sm:mx-auto">
-        <div className="-mt-[6rem] md:-mt-[17rem]">
-          <h2 className="text-2xl max-w-[20rem] sm:max-w-none md:text-[25px] font-medium md:tracking-[0.028rem]">
-            {t('story_heading')}
-          </h2>
-          <p className="max-w-[34rem] sm:mx-auto md:tracking-[0.028rem] my-4 sm:max-w-[34.5rem] text-lg md:text-base md:leading-[30px] md:mt-7 mt-7 leading-[20px] font-medium text-gray-primary/50">
-            {t('story_content')}
-          </p>
+      <Fade>
+        <div className="md:bg-[url('/images/successStory.png')] bg-no-repeat  bg-contain sm:text-center  px-[3%] sm:px-4 flex justify-center flex-col md:mb-[15.1rem] sm:-mt-58  w-full h-[60vh] sm:mx-auto">
+          <div className="-mt-[6rem] md:-mt-[17rem]">
+            <h2 className="text-2xl max-w-[20rem] sm:max-w-none md:text-[25px] font-medium md:tracking-[0.028rem]">
+              {t('story_heading')}
+            </h2>
+            <p className="max-w-[34rem] sm:mx-auto md:tracking-[0.028rem] my-4 sm:max-w-[34.5rem] text-lg md:text-base md:leading-[30px] md:mt-7 mt-7 leading-[20px] font-medium text-gray-primary/50">
+              {t('story_content')}
+            </p>
+          </div>
         </div>
-      </div>
+      </Fade>
     </section>
   );
 };
