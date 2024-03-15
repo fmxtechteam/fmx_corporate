@@ -1,6 +1,7 @@
 'use client'
 import { HomeArrow } from "@/assets/icons";
 import { Button } from "@/components";
+import { Bounce, Fade, Slide } from "react-awesome-reveal";
 import { useTranslation } from "react-i18next";
 
 export const Aside = () => {
@@ -11,9 +12,15 @@ export const Aside = () => {
       {" "}
       <aside className="text-white hidden md:block">
         <div className="text-[24px] md:text-[3.2rem] font-medium leading-[1.55] sm:-mt-2 -mt-[4.5rem] max-w-sm sm:max-w-xl md:-mt-2 lg:-mt[8rem]">
-          {t('showcase_heading')}
+          <Slide direction="up">
+            {t('showcase_heading')}
+          </Slide>
+
           <div className="sm:mt-7 mt-4 mb-[3rem]">
-            <HomeArrow className="sm:scale-[.95] scale-[.65] sm:-ml-4 -ml-[84px]" />
+            <Slide direction="up">
+              <HomeArrow className="sm:scale-[.95] scale-[.65] sm:-ml-4 -ml-[84px]" />
+            </Slide>
+
           </div>
           <div className="text-[16.2px] leading-[29px] text-gray/60 max-w-[26rem] sm:mt-6 mt-4 mb-[3.7rem] ">
             {t('showcase_content')}
@@ -38,11 +45,17 @@ export const Aside = () => {
           </p>
         </div>
       </aside>
+
+      {/* Mobile */}
       <aside className="text-white md:hidden">
         <div className="text-[26px] max-w-[18rem] md:text-[32px] font-medium leading-[1.55]  md:-mt-2 -mt-[5rem] md:max-w-none">
-          {t('showcase_heading')}
+          <Slide direction="up">
+            {t('showcase_heading')}
+          </Slide>
           <div className="mt-2 md:mt-4 mb-[3rem]">
-            <HomeArrow className="scale-[.51]  -ml-[7.5rem]" />
+            <Slide direction="up">
+              <HomeArrow className="scale-[.51]  -ml-[7.5rem]" />
+            </Slide>
           </div>
           <div className="text-[13px] md:text-[16.2px] leading-[18px] md:leading-[29px] text-gray/60 max-w-[17rem] sm:max-w-[26rem] sm:mt-6 -mt-5  mb-[3.7rem] ">
             {t('showcase_content')}
@@ -59,7 +72,7 @@ export const Aside = () => {
             <Button
               link={"/contact-us"}
               title={t('showcase_link_text')}
-              className="!bg-transparent !normal-case !py-[7px]  !text-primary underline"
+              className="!bg-transparent !normal-case !py-[7px]  !text-primary underline cursor-pointer"
             />
           </div>
           <p className="py-[14px] font-medium text-[9px]">

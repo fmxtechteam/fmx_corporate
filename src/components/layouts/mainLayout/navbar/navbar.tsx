@@ -16,6 +16,7 @@ import { useTranslation } from "react-i18next";
 export const Navbar = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
   const current = usePathname();
+  console.log(current)
   const { t } = useTranslation();
   return (
     <>
@@ -29,16 +30,16 @@ export const Navbar = () => {
               {routes.map((route) => (
                 <li
                   key={route.id}
-                  className={`flex items-center justify-center ${current === route.link ? " text-dark" : ""
+                  className={`flex items-center justify-center ${current.includes(route.id) ? " text-dark" : ""
                     }`}
                 >
-                  {current === route.link && (
+                  {current.includes(route.id) ? (
                     <div className="w-[2.5rem] h-[2.6px] bg-primary/60 absolute bottom-0 rounded-full" />
-                  )}
+                  ) : route.id === '/home' ? <div className="w-[2.5rem] h-[2.6px] bg-primary/60 absolute bottom-0 rounded-full" /> : null}
                   {route.link && <Link href={route.link}>{t(`navbar:${route.name}`)}</Link>}
                   {!route.link && (
                     <>
-                      {route.id === 2 && (
+                      {route.id === "services" && (
                         <>
                           <div className="relative">
                             <Menu>
@@ -87,16 +88,16 @@ export const Navbar = () => {
                               </Menu.Items>
                             </Menu>
                           </div>
-                          {current === "point-of-sale" && (
+                          {current.includes("point-of-sale") && (
                             <div className="w-[5rem] h-[2.6px] bg-primary/60 absolute bottom-0 rounded-full" />
                           )}
-                          {current === "/point-of-sale" && (
+                          {current.includes("/point-of-sale") && (
                             <div className="w-[5rem] h-[2.6px] bg-primary/60 absolute bottom-0 rounded-full" />
                           )}
-                          {current === "/online-ordering" && (
+                          {current.includes("/online-ordering") && (
                             <div className="w-[5rem] h-[2.6px] bg-primary/60 absolute bottom-0 rounded-full" />
                           )}
-                          {current === "/logistics" && (
+                          {current.includes("/logistics") && (
                             <div className="w-[5rem] h-[2.6px] bg-primary/60 absolute bottom-0 rounded-full" />
                           )}
                         </>

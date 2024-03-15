@@ -32,18 +32,18 @@ export const MobileNav = ({
                   {item.link && (
                     <Link
                       href={item.link ?? ""}
-                      className={`text-gray-primary/60 relative text-[17px] font-normal py-4 rounded-[4px]  transition-all w-max ${current === item.link && "!text-gray-primary"
+                      className={`text-gray-primary/60 relative text-[17px] font-normal py-4 rounded-[4px]  transition-all w-max ${current.includes(item.id) && "!text-gray-primary"
                         }`}
                     >
                       {t(`navbar:${item.name}`)}
-                      {current === item.link && (
+                      {current.includes(item.id) && (
                         <div className="w-full h-[2.6px] bg-primary absolute bottom-1 rounded-full" />
                       )}
                     </Link>
                   )}
                   {!item.link && (
                     <>
-                      {item.id === 2 && (
+                      {item.id === "services" && (
                         <>
                           <div className="relative mt-6 mb-3">
                             <Menu>
@@ -106,16 +106,16 @@ export const MobileNav = ({
                               )}
                             </Menu>
                           </div>
-                          {current === "point-of-sale" && (
+                          {current.includes("point-of-sale") && (
                             <div className="w-[5rem] h-[2.6px] bg-primary/60 absolute bottom-0 rounded-full" />
                           )}
-                          {current === "/point-of-sale" && (
+                          {current.includes("/point-of-sale") && (
                             <div className="w-[5rem] h-[2.6px] bg-primary/60 absolute bottom-0 rounded-full" />
                           )}
-                          {current === "/online-ordering" && (
+                          {current.includes("/online-ordering") && (
                             <div className="w-[5rem] h-[2.6px] bg-primary/60 absolute bottom-0 rounded-full" />
                           )}
-                          {current === "/logistics" && (
+                          {current.includes("/logistics") && (
                             <div className="w-[5rem] h-[2.6px] bg-primary/60 absolute bottom-0 rounded-full" />
                           )}
                         </>
