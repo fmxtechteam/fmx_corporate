@@ -4,6 +4,7 @@ import { Disclosure } from "@headlessui/react";
 import { IDisclosure } from "@/interfaces";
 import { Add, Minus } from "@/assets/icons";
 import { useTranslation } from "react-i18next";
+import { Fade } from "react-awesome-reveal";
 
 export const DisclosureComponent: React.FC<IDisclosure> = ({
   containerClassName,
@@ -38,8 +39,10 @@ export const DisclosureComponent: React.FC<IDisclosure> = ({
                     )}
                   </div>
                 </Disclosure.Button>
-                <Disclosure.Panel className="pt-6  text-[18px] md:text-[16.1px] leading-[28.5px] md:font-medium text-gray-primary/50">
-                  {t(`privacy_policy:${description}`)}
+                <Disclosure.Panel className="pt-6  text-[18px] md:text-[16.1px] leading-[28.5px] md:font-medium text-gray-primary/50 overflow-hidden">
+                  <Fade direction="up">
+                    {t(`privacy_policy:${description}`)}
+                  </Fade>
                 </Disclosure.Panel>
               </div>
             )}
