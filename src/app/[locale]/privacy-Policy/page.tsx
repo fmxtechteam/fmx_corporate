@@ -2,7 +2,7 @@ import { dataCollection, privacyCookies, termsAndCondition } from "@/data";
 import { Faqs, MainLayout, PrivacyPolicyComponent } from "@/components";
 import TranslationsProvider from "@/components/TranslationsProvider";
 import initTranslations from "@/app/i18n";
-const namespaces = ['home', 'navbar', 'common', 'footer', 'aboutUs', 'faqs', 'point_of_sale', 'online_ordering', 'logistics'];
+const namespaces = ['home', 'navbar', 'common', 'footer', 'aboutUs', 'faqs', 'point_of_sale', 'online_ordering', 'logistics', 'privacy_policy'];
 const PrivatePolicy = async ({ params: { locale } }: {
   params: {
     locale: string
@@ -15,16 +15,17 @@ const PrivatePolicy = async ({ params: { locale } }: {
         <PrivacyPolicyComponent />
         <div className={"lg:!max-w-[70.6rem] mx-auto pt-24"}>
           <Faqs
-            asideContent={true}
+            asideContent={false}
             className="!-mt-[7.2rem] md:!-mt-[6.8rem]"
             titleClassName="hidden"
             descriptionClassName="hidden"
             asideClassName="md:!space-x-10"
             asideTitle="yourConsent"
             faqs={termsAndCondition}
+
           />
-          <Faqs
-            asideContent={true}
+          {/* <Faqs
+            asideContent={false}
             asideTitle="dataCollection"
             className="!-mt-[7.2rem] md:!-mt-[6.8rem]"
             titleClassName="hidden"
@@ -40,7 +41,7 @@ const PrivatePolicy = async ({ params: { locale } }: {
             asideClassName="md:!space-x-[6.2rem]"
             descriptionClassName="hidden"
             faqs={privacyCookies}
-          />
+          /> */}
         </div>
       </MainLayout>
     </TranslationsProvider>

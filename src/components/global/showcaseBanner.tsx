@@ -5,6 +5,7 @@ import { IServiceShowcase } from "@/interfaces";
 import { Button, Input } from "@/components";
 import { aboutUsShowcaseImg, videoScreen, youtube } from "@/constant/imgs";
 import { useTranslation } from "react-i18next";
+import { Fade, Slide } from "react-awesome-reveal";
 
 export const ShowcaseBanner: React.FC<IServiceShowcase> = ({
   title = "Transporting Produce Made easier ",
@@ -29,18 +30,27 @@ export const ShowcaseBanner: React.FC<IServiceShowcase> = ({
       >
         <section className="md:max-w-[70.6rem] text-center flex flex-col items-center font-sans pt-[4.8rem] mx-auto max-w-lg">
           {
-            aboutText && <h2 className="px-3 py-1 text-primary border-gray-300 border rounded-md shadow-md">{aboutText}</h2>
+            aboutText &&
+            <Fade>
+              <h2 className="px-3 py-1 text-primary border-gray-300 border rounded-md shadow-md">{aboutText}</h2>
+            </Fade>
           }
-          <div
-            className={`text-3xl md:text-[52px] max-w-[33rem] md:leading-[80px] font-medium mt-2 ${className}`}
-          >
-            {title}
-          </div>
-          <p
-            className={`${descriptionClassName} max-w-[26rem] mt-[2.47rem] text-[16.2px] leading-[28px] text-dark/50 font-medium`}
-          >
-            {description}
-          </p>
+          <Slide direction="up">
+            <div
+              className={`text-3xl md:text-[52px] max-w-[33rem] md:leading-[80px] font-medium mt-2 ${className}`}
+            >
+
+              {title}
+            </div>
+          </Slide>
+          <Fade>
+            <p
+              className={`${descriptionClassName} max-w-[26rem] mt-[2.47rem] text-[16.2px] leading-[28px] text-dark/50 font-medium`}
+            >
+              {description}
+            </p>
+          </Fade>
+
           {!aboutUs && (
             <div className="flex items-center justify-center md:space-x-1 mb-16 mt-10 md:mt-[3.8rem]">
               <Button
@@ -96,13 +106,6 @@ export const ShowcaseBanner: React.FC<IServiceShowcase> = ({
           </div>
         </>
       )}
-      {/* {faqs && (
-        <Input
-          faqs={true}
-          placeholder={t("faqs:search_faqs")}
-          inputContainer="!rounded-md bg-white !border border-gray-primary/40 absolute z-40 mt-2 max-w-xl  bottom-[10.8rem] md:bottom-[9.3rem]  mx-auto"
-        />
-      )} */}
     </div>
   );
 };

@@ -1,6 +1,7 @@
 import homeFrame from "@/assets/images/homeFrame.png";
 import homeImg from "@/assets/images/homeImg.png";
 import homeImgChart from "@/assets/images/homeImgChart.png";
+import homeImgChart2 from "@/assets/images/homeImgChart2.png";
 import aboutUsImg from "@/assets/images/aboutUsImg.png";
 import videoPlayback from "@/assets/images/video.png";
 import videoScreen from "@/assets/images/videoScreen.png";
@@ -29,12 +30,13 @@ import nicholasImg from "@/assets/images/nicholas.png";
 import daniellaImg from "@/assets/images/daniella.png";
 import hitoshiImg from "@/assets/images/hitoshi.png";
 import tolulopeImg from "@/assets/images/tolulope.png";
-import aboutShowcaseImg from "@/assets/images/about-showcase-img-md.png"
+import aboutShowcaseImg from "@/assets/images/about-showcase-img-md.png";
 
 export {
   homeFrame,
   homeImg,
   homeImgChart,
+  homeImgChart2,
   aboutUsImg,
   videoPlayback,
   videoScreen,
