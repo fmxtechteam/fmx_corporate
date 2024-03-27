@@ -9,7 +9,6 @@ export const Aside = () => {
       <div className="text-2xl md:text-[2.3rem] font-medium leading-[1.6]">
         <Slide direction="down">
           <h2 className="text-[13px] -mt-5 md:-mt-0 md:text-[14.8px] font-medium">
-
             {t('our_service_heading')}
           </h2>
         </Slide>

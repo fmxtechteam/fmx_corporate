@@ -50,25 +50,10 @@ export const ContactUsCard = ({
                     <li className=" hover:text-primary hover:underline text-gray/50 cursor-pointer transition duration-300">
                       info@freshmarketxchange.co
                     </li>
-                    <li className=" hover:text-primary hover:underline text-gray/50 pt-2 cursor-pointer transition duration-300">
-                      freshmarketxchange.co
-                    </li>{" "}
                   </ul>
                 </nav>
               </div>
-              <div className="text-xl leading-[28px]  md:text-2xl pb-5 -mt-[5px] font-medium ">
-                {t("contactUs:contactUS_call_us")}
-                <nav className="mt-3">
-                  <ul className=" text-base font-medium space-y-2">
-                    <li className=" hover:text-primary hover:underline text-gray/50 cursor-pointer transition duration-300">
-                      + 097645764242345
-                    </li>
-                    <li className=" hover:text-primary hover:underline text-gray/50 pt-2 cursor-pointer transition duration-300">
-                      + 097645764242345
-                    </li>
-                  </ul>
-                </nav>
-              </div>
+
             </div>
           </div>
         </div>
