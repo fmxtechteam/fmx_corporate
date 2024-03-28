@@ -1,6 +1,7 @@
 "use client"
 import { Fade } from "react-awesome-reveal";
 import Cookies from 'js-cookie'
+
 export const VideoSection = () => {
   const translate = Cookies.get('NEXT_LOCALE')
   const videoBackground = `bg-[url('/images/logistics-banner.png')]`
