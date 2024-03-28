@@ -16,7 +16,7 @@ export function generateStaticParams() {
 
 export default function RootLayout({ children, params: { locale } }: IRootLayout) {
   return (
-    <html lang={locale} dir={dir(locale)}>
+    <html lang="ja" dir={dir(locale)}>
       <head>
         <link rel="icon" href={"/images/logo.png"} type={"image/png"} />
       </head>

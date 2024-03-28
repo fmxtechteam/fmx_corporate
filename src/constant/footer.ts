@@ -3,7 +3,7 @@ import path from "path";
 export const companies = [
   {
     name: "about",
-    path: "/about",
+    path: "/about-us",
   },
   {
     name: "contact_us",
@@ -20,8 +20,6 @@ export const supports = [
     name: "help_centre",
     path: "/contact-us",
   },
-  
- 
 ];
 
 export const services = [
@@ -36,5 +34,5 @@ export const services = [
   {
     name: "online_ordering",
     path: "/online-ordering",
-  }
+  },
 ];
