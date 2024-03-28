@@ -6,6 +6,7 @@ import Content from "@/components/common/termsAndCondition/Content";
 import { TermsAndConditionBody } from "@/components/common/termsAndCondition";
 import { termsAndCondition } from '../../../data/termsAndCondition';
 import { text } from "stream/consumers";
+import Link from "next/link";
 
 const namespaces = ['home', 'navbar', 'common', 'footer', 'aboutUs', 'faqs', 'point_of_sale', 'online_ordering', 'logistics', 'privacy_policy', 'terms_conditions'];
 const TermsAndConditions = async ({ params: { locale } }: {
@@ -131,8 +132,7 @@ const TermsAndConditions = async ({ params: { locale } }: {
     {
       text: "sectionTwenty",
       content: "sectionTwentyContentOne",
-
-    }
+    },
   ]
   return (
     <TranslationsProvider locale={locale} resources={resources} namespaces={namespaces} >
@@ -147,6 +147,9 @@ const TermsAndConditions = async ({ params: { locale } }: {
               />
             ))
           }
+          <div>
+            <Link href={"https://stripe.com/legal/ssa#general-terms"} className='text-sm xl:text-base  font-bold text-green-500 opacity-50  cursor-pointer'>{t("common:stripe_terms_and_conditions")}</Link>
+          </div>
         </section>
       </MainLayout>
     </TranslationsProvider>
