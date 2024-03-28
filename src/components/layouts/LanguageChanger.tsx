@@ -38,8 +38,8 @@ export default function LanguageChanger() {
 
     return (
         <select className=' border-none outline-none' onChange={handleChange} value={currentLocale}>
-            <option value="en">English</option>
             <option value="ja">日本語</option>
+            <option value="en">English</option>
         </select>
     );
 }

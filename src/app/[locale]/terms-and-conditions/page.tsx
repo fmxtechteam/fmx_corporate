@@ -98,6 +98,39 @@ const TermsAndConditions = async ({ params: { locale } }: {
       subContent2: "sectionThirteenContentThree",
       subContent3: "sectionThirteenContentFour",
       subContent4: "sectionThirteenContentFive",
+    },
+    {
+      text: "sectionFourteen",
+      content: "sectionFourteenContentOne",
+    },
+    {
+      text: "sectionFifteen",
+      content: "sectionFifteenContentOne",
+    },
+    {
+      text: "sectionSixteen",
+      content: "sectionSixteenContentOne",
+      subContent1: "sectionSixteenContentTwo",
+      subContent2: "sectionSixteenContentThree",
+    },
+    {
+      text: "sectionSeventeen",
+      content: "sectionSeventeenContentOne",
+      subContent1: "sectionSeventeenContentTwo",
+      subContent2: "sectionSeventeenContentThree",
+    },
+    {
+      text: "sectionEighteen",
+      content: "sectionEighteenContentOne",
+    },
+    {
+      text: "sectionNineteen",
+      content: "sectionNineteenContentOne",
+      subContent1: "sectionNineteenContentTwo",
+    },
+    {
+      text: "sectionTwenty",
+      content: "sectionTwentyContentOne",
 
     }
   ]

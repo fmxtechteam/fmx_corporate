@@ -69,7 +69,7 @@ export const Footer = () => {
           </div>
         </div>
       </div>
-      <div className="flex justify-center pt-20">
+      <div className="flex justify-center pt-20 mt-4">
         <div className="md:absolute bottom-8 w-full justify-between items-center lg:flex max-w-[70.6rem] mx-auto text-[15px]  md:text-[14.8px] leading-[40px] md:leading-[28px] -mt-[3px] font-medium text-gray-primary/50">
           <ul className="flex space-x-7 list-disc md:hidden mb-16">
             <li className="list-none">
@@ -98,9 +98,15 @@ export const Footer = () => {
           <div>
             <ul className="md:flex space-x-7 list-disc hidden">
               <li className="list-none cursor-pointer">
-                <Link href={"/terms-and-conditions"}>
+                <Link href={"/terms-and-conditions"} target="_blank">
                   {" "}
                   {t("common:terms_and_conditions")}
+                </Link>
+              </li>
+              <li className="cursor-pointer">
+                <Link href={"https://stripe.com/legal/ssa#general-terms"}>
+                  {" "}
+                  {t("common:stripe_terms_and_conditions")}
                 </Link>
               </li>
               <li>
@@ -108,6 +114,7 @@ export const Footer = () => {
                   {t("common:privacy_policy")}
                 </Link>
               </li>
+              
             </ul>
           </div>
         </div>

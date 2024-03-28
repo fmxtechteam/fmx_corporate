@@ -1,12 +1,15 @@
 {
   "heading": "Transporting Produce Made easier",
-  "subheading": "Buying and selling produce at the Japanese wholesale market made easier, we’ve got all your needs covered.",
+  "subheading": "Buying and selling produce at the Japanese Wholesale Markets made easier, we’ve got all your needs covered.",
   "beneftis_title": "BENEFITS",
   "beneftis_description": "Designed to enhance the efficiency of your supply chain",
-  "beneftis_content": "Unleash the power of digital sales. Provide your customers with convenience. Unleash the power of digital sales. Provide your customers with convenience.",
+  "beneftis_content": "Unleash the power of digital sales. Provide your customers with convenience to ensure they receive their order.",
   "features": {
-    "title1": "Fast and Reliable Delivery",
+    "title1": "Order sent directly to you",
+    "description1": "Get your order sent directly to you! Enjoy hassle-free shopping with our efficient delivery service. Sit back and relax while we ensure your items reach you swiftly and securely.",
     "title2": "Real-time Tracking",
-    "title3": "Cost-Effective Transportation"
+    "description2": "Monitor the progress of your shipments in real-time. We give you assurance and a peace of mind from pickup to final destination, stay informed and in control with FMX.",
+    "title3": "Easy for you & your staff to keep track",
+    "description3": "Simplify order management with our user-friendly system. Seamlessly track every order, ensuring efficiency for you and your staff. Stay organized and focused on your business effortlessly"
   }
 }
