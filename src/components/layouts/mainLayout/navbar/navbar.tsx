@@ -16,7 +16,6 @@ import { useTranslation } from "react-i18next";
 export const Navbar = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
   const current = usePathname();
-  console.log(current)
   const { t } = useTranslation();
   return (
     <>

@@ -6,16 +6,8 @@ export const companies = [
     path: "/about",
   },
   {
-    name: "partnership",
-    path: "/#",
-  },
-  {
-    name: "career",
-    path: "/#",
-  },
-  {
     name: "contact_us",
-    path: "/#",
+    path: "/contact-us",
   },
 ];
 
@@ -26,16 +18,10 @@ export const supports = [
   },
   {
     name: "help_centre",
-    path: "/#",
+    path: "/contact-us",
   },
-  {
-    name: "pricing_model",
-    path: "/#",
-  },
-  {
-    name: "talk_to_sales",
-    path: "/#",
-  },
+  
+ 
 ];
 
 export const services = [
@@ -50,9 +36,5 @@ export const services = [
   {
     name: "online_ordering",
     path: "/online-ordering",
-  },
-  {
-    name: "pricing_product",
-    path: "/#",
-  },
+  }
 ];
