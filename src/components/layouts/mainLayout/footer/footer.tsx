@@ -103,18 +103,12 @@ export const Footer = () => {
                   {t("common:terms_and_conditions")}
                 </Link>
               </li>
-              <li className="cursor-pointer">
-                <Link href={"https://stripe.com/legal/ssa#general-terms"}>
-                  {" "}
-                  {t("common:stripe_terms_and_conditions")}
-                </Link>
-              </li>
               <li>
                 <Link href={"/privacy-Policy"}>
                   {t("common:privacy_policy")}
                 </Link>
               </li>
-              
+
             </ul>
           </div>
         </div>
