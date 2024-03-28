@@ -9,7 +9,6 @@ import {
   Showcase,
   Skyrocket,
   SuccessStory,
-  Testimonials,
   VideoSection,
 } from "@/components";
 import TranslationsProvider from "@/components/TranslationsProvider";

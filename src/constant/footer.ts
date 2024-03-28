@@ -3,19 +3,11 @@ import path from "path";
 export const companies = [
   {
     name: "about",
-    path: "/about",
-  },
-  {
-    name: "partnership",
-    path: "/#",
-  },
-  {
-    name: "career",
-    path: "/#",
+    path: "/about-us",
   },
   {
     name: "contact_us",
-    path: "/#",
+    path: "/contact-us",
   },
 ];
 
@@ -26,15 +18,7 @@ export const supports = [
   },
   {
     name: "help_centre",
-    path: "/#",
-  },
-  {
-    name: "pricing_model",
-    path: "/#",
-  },
-  {
-    name: "talk_to_sales",
-    path: "/#",
+    path: "/contact-us",
   },
 ];
 
@@ -50,9 +34,5 @@ export const services = [
   {
     name: "online_ordering",
     path: "/online-ordering",
-  },
-  {
-    name: "pricing_product",
-    path: "/#",
   },
 ];

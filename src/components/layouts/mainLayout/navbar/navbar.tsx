@@ -16,7 +16,6 @@ import { useTranslation } from "react-i18next";
 export const Navbar = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
   const current = usePathname();
-  console.log(current)
   const { t } = useTranslation();
   return (
     <>
@@ -114,12 +113,12 @@ export const Navbar = () => {
             </div>
             <div className="flex space-x-2 lg:space-x-4  items-center">
               <Button
-                link={"/login"}
+                link={"https://app.freshmarketxchange.co/"}
                 title={t('navbar:user_login')}
                 className="!bg-transparent border !py-[8px] md:!py-[9.6px]  !border-primary !text-primary"
               />
               <Button
-                link={"/register"}
+                link={"https://app.freshmarketxchange.co/register"}
                 title={t('navbar:register')}
                 className="mr-2 lg:mr-0  !py-[8px] md:!py-[9.6px]"
               />

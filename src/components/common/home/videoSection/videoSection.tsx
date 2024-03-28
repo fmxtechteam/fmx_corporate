@@ -1,32 +1,19 @@
 "use client"
-import Image from "next/image";
-
-import { videoPlayback, videoScreen, youtube } from "@/constant/imgs";
 import { Fade } from "react-awesome-reveal";
-
+import Cookies from 'js-cookie'
 export const VideoSection = () => {
+  const translate = Cookies.get('NEXT_LOCALE')
+  const videoBackground = `bg-[url('/images/logistics-banner.png')]`
   return (
     <div className="mb-20 -mt-[5.7rem] relative overflow-hidden">
       <Fade>
-        <Image
-          src={videoPlayback}
-          className="h-[15rem] md:h-[30.6rem]"
-          alt={"video playback"}
-        />
-        <div className="mx-auto flex justify-center bg-red-500">
-          <div className="absolute top-0 max-w-[980px] md:mx-auto max-h-[95%] md:mt-[3.6rem] mt-[2rem] mx-2 ">
-            <Image
-              src={videoScreen}
-              className="h-[350px] md:h-[660px]"
-              alt={"video playback"}
-            />
+        <div className={`mx-auto flex justify-center  bg-no-repeat relative bg-cover ${videoBackground} rounded-bl-md rounded-br-md`}>
+          <div className={`max-w-[980px] md:mx-auto py-4 `}>
+            <video className="h-full w-full !rounded-2xl px-6" controls>
+              <source src={`${translate === 'en' ? 'https://res.cloudinary.com/mobinet/video/upload/v1711544369/english_version_zk2fex.mp4' : 'https://res.cloudinary.com/mobinet/video/upload/v1711598651/TrainingVideo_Japanesse_wdvc6j.mp4'}`} type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
           </div>
-          <Image
-            src={youtube}
-            className="absolute w-[8rem] top-24 md:top-[14.5rem] md:w-[12.7rem]"
-            alt={"video playback"}
-          />
-
         </div>
       </Fade>
     </div>
