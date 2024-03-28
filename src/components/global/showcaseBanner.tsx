@@ -6,7 +6,7 @@ import { Button, Input } from "@/components";
 import { aboutUsShowcaseImg, videoScreen, youtube } from "@/constant/imgs";
 import { useTranslation } from "react-i18next";
 import { Fade, Slide } from "react-awesome-reveal";
-
+import Cookies from 'js-cookie'
 export const ShowcaseBanner: React.FC<IServiceShowcase> = ({
   title = "Transporting Produce Made easier ",
   className,
@@ -23,6 +23,7 @@ export const ShowcaseBanner: React.FC<IServiceShowcase> = ({
   aboutText = false,
 }) => {
   const { t } = useTranslation();
+  const translate = Cookies.get('NEXT_LOCALE')
   return (
     <div className="relative">
       <main
@@ -68,27 +69,23 @@ export const ShowcaseBanner: React.FC<IServiceShowcase> = ({
             </div>
           )}
           {pos && (
-            <>
+            <div>
               {" "}
-              <div className="mx-auto flex relative mt-10 md:mt-0 justify-center">
-                <div className="top-0 max-w-[980px] md:mx-auto max-h-[95%]  -mt-2">
-                  <Image
-                    src={videoScreen}
-                    className="h-[250px] md:h-[660px]"
-                    alt={"video playback"}
-                  />
+              <Fade>
+                <div className={`mx-auto flex items-center justify-center relative`}>
+                  <div className={`max-w-[980px] md:mx-auto`}>
+                    <video className="h-full w-full !rounded-2xl px-6" controls>
+                      <source src={`${translate === 'en' ? 'https://res.cloudinary.com/mobinet/video/upload/v1711544369/english_version_zk2fex.mp4' : 'https://res.cloudinary.com/mobinet/video/upload/v1711598651/TrainingVideo_Japanesse_wdvc6j.mp4'}`} type="video/mp4" />
+                      Your browser does not support the video tag.
+                    </video>
+                  </div>
                 </div>
-                <Image
-                  src={youtube}
-                  className="absolute w-[6rem] top-16 md:top-[10.3rem] md:w-[12.7rem]"
-                  alt={"youtube"}
-                />
-              </div>
-            </>
+              </Fade>
+            </div>
           )}
         </section>
       </main>
-      {aboutUsImg && (
+      {aboutUsImg ? (
         <>
           <div className="hidden md:block !z-50 xl:-mt-[449px] -mt-[280px]  absolute">
             <Image
@@ -105,7 +102,7 @@ export const ShowcaseBanner: React.FC<IServiceShowcase> = ({
             />
           </div>
         </>
-      )}
+      ) : null}
     </div>
   );
 };
