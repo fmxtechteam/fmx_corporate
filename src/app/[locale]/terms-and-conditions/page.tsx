@@ -131,6 +131,7 @@ const TermsAndConditions = async ({ params: { locale } }: {
     {
       text: "sectionTwenty",
       content: "sectionTwentyContentOne",
+
     }
   ]
   return (
