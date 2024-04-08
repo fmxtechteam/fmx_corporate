@@ -11,18 +11,15 @@ export const Footer = () => {
   return (
     <footer className="bg-[url('/images/footerBackground.png')] h-full md:h-[29.2rem] px-[3%] sm:px-0  bg-cover bg-no-repeat relative">
       <div className="md:flex pt-[3rem] md:pt-[3.7rem] items-center justify-between max-w-[70.6rem] mx-auto gap-20">
-        <div>
-          <Link href="/" className="flex-grow md:-ml-20">
+        <div className="grid gap-4">
+          <Link href="/" className="flex-grow ">
             <Image
               src={logo}
               alt="Company Logo"
               className="!w-[120px] !h-[80px]"
             />
           </Link>
-          <div className="text-[16.5px] leading-[28px]  mt-4 font-medium text-gray-primary/50">
-            {t("footer:footer_title")}
-          </div>
-          <Input className="md:w-[24rem] mt-1 md:mt-[3px]" />
+          <Input className="" type="text" label={t("footer:footer_title")} />
         </div>
         <div className="grid md:grid-cols-3 grid-cols-2 gap-20 mt-16 md:-mt-2">
           <div className="font-medium">

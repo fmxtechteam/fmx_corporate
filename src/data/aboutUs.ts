@@ -4,12 +4,7 @@ import {
   StreamedTransaction,
   SupplyChain,
 } from "@/assets/icons";
-import {
-  daniellaImg,
-  hitoshiImg,
-  nicholasImg,
-  tolulopeImg,
-} from "@/constant/imgs";
+import { hitoshiImg, nicholasImg, tolulopeImg, uenoImg } from "@/constant/imgs";
 
 export const aboutUs = [
   {
@@ -24,7 +19,7 @@ export const aboutUs = [
     icon: SupplyChain,
     title: "whychoosefmx_about_title2",
     description: "whychoosefmx_about_description2",
-    image: daniellaImg,
+    image: uenoImg,
   },
   {
     id: 3,
@@ -51,13 +46,6 @@ export const aboutUsCard = [
     image: hitoshiImg,
   },
   {
-    id: 3,
-    name: "Tolulope Ogunleye",
-    title: "ourTeam_team_title4",
-    description: "ourTeam_team_description4",
-    image: tolulopeImg,
-  },
-  {
     id: 2,
     title: "ourTeam_team_title1",
     description: "ourTeam_team_description1",
@@ -65,10 +53,17 @@ export const aboutUsCard = [
     name: "Nicholas Gangemi",
   },
   {
-    id: 4,
-    name: "Daniella Toka",
+    id: 3,
+    name: "Takaaki Ueno",
     title: "ourTeam_team_title3",
     description: "ourTeam_team_description3",
-    image: daniellaImg,
+    image: uenoImg,
+  },
+  {
+    id: 4,
+    name: "Tolulope Ogunleye",
+    title: "ourTeam_team_title4",
+    description: "ourTeam_team_description4",
+    image: tolulopeImg,
   },
 ];
