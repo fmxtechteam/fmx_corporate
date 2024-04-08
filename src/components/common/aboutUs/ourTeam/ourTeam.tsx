@@ -17,21 +17,32 @@ export const OurTeam = () => {
         </div>
       </div>
       <div>
-        <div className=" mb-[6.2rem] grid  justify-between  order-[1] bg__about gap-x-16 md:gap-y-32 gap-y-20">
+        <div className="grid md:gap-10 gap-5">
           {aboutUsCard.map(({ id, name, title, image, description }) => (
             <div
               key={id}
-              className="rounded-[24px] grid relative w-full md:grid-cols-2 bg"
+              className="rounded-[24px] w-full border-gray-primary/25 border grid md:grid-cols-2 grid-cols-1 md:gap-6 gap-4"
             >
-              <Image
-                src={image}
-                alt={"online ordering image"}
-                className={`w-full md:h-[420px] md:w-[540px] right-0 ${id === 2 ? "md:col-start-2" : ""
-                  } ${id === 4 ? "md:col-start-2" : ""}`}
-              />
+              <div className="md:hidden block">
+                {
+                  <Image
+                    src={image}
+                    alt={name}
+                    className={`w-full object-cover rounded-[24px] ${name === "Takaaki Ueno" ? "h-[500px]" : ""}`}
+                  />
+                }
+              </div>
+              <div className="md:block hidden">
+                {
+                  id % 2 !== 0 ? <Image
+                    src={image}
+                    alt={name}
+                    className={`w-full object-cover rounded-[24px] p-3 ${name === "Takaaki Ueno" ? "h-[500px]" : ""}`}
+                  /> : null
+                }
+              </div>
               <div
-                className={`border md:absolute md:top-10 bg-white order-[11] px-6 md:px-10 md:w-[60%] h-full md:h-[80%] top-5 border-gray-primary/25 rounded-[16px] -right-20 md:right-[0rem] ${id === 2 ? "md:!left-0" : ""
-                  }  ${id === 4 ? "md:!left-0" : ""} py-3`}
+                className={`p-4 rounded-md -right-20 md:right-[0rem]  py-3`}
               >
                 <h1 className="font-medium text-[19px] md:text-base mt-5 mb-4 text-primary">
                   {name}
@@ -41,7 +52,21 @@ export const OurTeam = () => {
                 </h1>
                 <p className="mb-[8px]  text-[17px] md:text-[16.9px] py-4 md:py-0 leading-[28.5px] text-gray-primary/50 font-normal">
                   {t(`aboutUs:${description}`)}
-                </p>
+                </p >
+                {
+                  name === "Takaaki Ueno" ? <p className="  text-[17px] md:text-[16.9px] py-4 md:py-0 leading-[28.5px] text-gray-primary/50 font-normal">
+                    {t(`aboutUs:ourTeam_team_description3b`)}
+                  </p > : null
+                }
+              </div>
+              <div className=" md:block hidden">
+                {
+                  id % 2 === 0 ? <Image
+                    src={image}
+                    alt={name}
+                    className={`w-full object-cover rounded-[24px] p-3 ${name === "Takaaki Ueno" ? "h-[500px]" : ""}`}
+                  /> : null
+                }
               </div>
             </div>
           ))}
