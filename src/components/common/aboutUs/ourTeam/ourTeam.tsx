@@ -54,7 +54,7 @@ export const OurTeam = () => {
                   {t(`aboutUs:${description}`)}
                 </p >
                 {
-                  name === "Takaaki Ueno" ? <p className="mb-[8px]  text-[17px] md:text-[16.9px] py-4 md:py-0 leading-[28.5px] text-gray-primary/50 font-normal">
+                  name === "Takaaki Ueno" ? <p className="  text-[17px] md:text-[16.9px] py-4 md:py-0 leading-[28.5px] text-gray-primary/50 font-normal">
                     {t(`aboutUs:ourTeam_team_description3b`)}
                   </p > : null
                 }
