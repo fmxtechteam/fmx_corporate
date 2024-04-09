@@ -46,19 +46,20 @@ export const aboutUsCard = [
     image: hitoshiImg,
   },
   {
-    id: 2,
-    title: "ourTeam_team_title1",
-    description: "ourTeam_team_description1",
-    image: nicholasImg,
-    name: "Nicholas Gangemi",
-  },
-  {
     id: 3,
     name: "Takaaki Ueno",
     title: "ourTeam_team_title3",
     description: "ourTeam_team_description3",
     image: uenoImg,
   },
+  {
+    id: 2,
+    title: "ourTeam_team_title1",
+    description: "ourTeam_team_description1",
+    image: nicholasImg,
+    name: "Nicholas Gangemi",
+  },
+
   {
     id: 4,
     name: "Tolulope Ogunleye",

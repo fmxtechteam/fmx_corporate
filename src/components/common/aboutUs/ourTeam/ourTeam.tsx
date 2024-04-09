@@ -23,24 +23,11 @@ export const OurTeam = () => {
               key={id}
               className="rounded-[24px] w-full border-gray-primary/25 border grid md:grid-cols-2 grid-cols-1 md:gap-6 gap-4"
             >
-              <div className="md:hidden block">
-                {
-                  <Image
-                    src={image}
-                    alt={name}
-                    className={`w-full object-cover rounded-[24px] ${name === "Takaaki Ueno" ? "h-[500px]" : ""}`}
-                  />
-                }
-              </div>
-              <div className="md:block hidden">
-                {
-                  id % 2 !== 0 ? <Image
-                    src={image}
-                    alt={name}
-                    className={`w-full object-cover rounded-[24px] p-3 ${name === "Takaaki Ueno" ? "h-[500px]" : ""}`}
-                  /> : null
-                }
-              </div>
+              <Image
+                src={image}
+                alt={name}
+                className={`w-full object-cover rounded-[24px] p-3 bg-gray-secondary ${name === "Takaaki Ueno" ? "h-[500px]" : ""}`}
+              />
               <div
                 className={`p-4 rounded-md -right-20 md:right-[0rem]  py-3`}
               >
@@ -57,15 +44,6 @@ export const OurTeam = () => {
                   name === "Takaaki Ueno" ? <p className="  text-[17px] md:text-[16.9px] py-4 md:py-0 leading-[28.5px] text-gray-primary/50 font-normal">
                     {t(`aboutUs:ourTeam_team_description3b`)}
                   </p > : null
-                }
-              </div>
-              <div className=" md:block hidden">
-                {
-                  id % 2 === 0 ? <Image
-                    src={image}
-                    alt={name}
-                    className={`w-full object-cover rounded-[24px] p-3 ${name === "Takaaki Ueno" ? "h-[500px]" : ""}`}
-                  /> : null
                 }
               </div>
             </div>
