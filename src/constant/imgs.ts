@@ -30,6 +30,7 @@ import nicholasImg from "@/assets/images/nicholas.png";
 import daniellaImg from "@/assets/images/daniella.png";
 import hitoshiImg from "@/assets/images/hitoshi.png";
 import tolulopeImg from "@/assets/images/tolulope.png";
+import uenoImg from "@/assets/images/ueno.jpeg";
 import aboutShowcaseImg from "@/assets/images/about-showcase-img-md.png";
 
 export {
@@ -57,7 +58,7 @@ export {
   features3,
   features4,
   aboutUsShowcaseImg,
-  // teamToka,
+  uenoImg,
   japanOffice,
   australianOffice,
   ourMission,
