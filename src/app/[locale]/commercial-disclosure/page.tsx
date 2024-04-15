@@ -53,7 +53,7 @@ const CommercialDisclosure = async ({ params: { locale } }: {
     },
   ]
 
-  const lists = ["point_of_sales", "online_ordering", "logistics"]
+  const lists = ["point_of_sales", "online_ordering"]
   return (
     <TranslationsProvider locale={locale} resources={resources} namespaces={namespaces} >
       <MainLayout>
