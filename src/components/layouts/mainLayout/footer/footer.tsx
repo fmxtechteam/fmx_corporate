@@ -8,6 +8,22 @@ import { companies, services, supports } from "@/constant/footer";
 
 export const Footer = () => {
   const { t } = useTranslation();
+
+  const footerListPolicies = [
+    {
+      name: "terms_and_conditions",
+      path: "/terms-and-conditions",
+    },
+    {
+      name: "privacy_policy",
+      path: "/privacy-Policy",
+    },
+    {
+      name: "commercial_disclosure",
+      path: "/commercial-disclosure",
+    },
+
+  ]
   return (
     <footer className="bg-[url('/images/footerBackground.png')] h-full md:h-[29.2rem] px-[3%] sm:px-0  bg-cover bg-no-repeat relative">
       <div className="md:flex pt-[3rem] md:pt-[3.7rem] items-center justify-between max-w-[70.6rem] mx-auto gap-20">
@@ -94,18 +110,15 @@ export const Footer = () => {
           </div>
           <div>
             <ul className="md:flex space-x-7 list-disc hidden">
-              <li className="list-none cursor-pointer">
-                <Link href={"/terms-and-conditions"} target="_blank">
-                  {" "}
-                  {t("common:terms_and_conditions")}
-                </Link>
-              </li>
-              <li>
-                <Link href={"/privacy-Policy"}>
-                  {t("common:privacy_policy")}
-                </Link>
-              </li>
-
+              {
+                footerListPolicies.map((item, index) => (
+                  <li key={`footerListPolicies-${index}`} className="list-none">
+                    <Link href={item.path}>
+                      {t(`common:${item.name}`)}
+                    </Link>
+                  </li>
+                ))
+              }
             </ul>
           </div>
         </div>
