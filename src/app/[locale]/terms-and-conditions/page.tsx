@@ -2,7 +2,6 @@
 import { MainLayout, TermsAndConditionSection } from "@/components";
 import TranslationsProvider from "@/components/TranslationsProvider";
 import initTranslations from "@/app/i18n";
-import Content from "@/components/common/termsAndCondition/Content";
 import { TermsAndConditionBody } from "@/components/common/termsAndCondition";
 import { termsAndCondition } from '../../../data/termsAndCondition';
 import { text } from "stream/consumers";
