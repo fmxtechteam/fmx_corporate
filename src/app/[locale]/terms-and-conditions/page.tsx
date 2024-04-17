@@ -27,7 +27,8 @@ const TermsAndConditions = async ({ params: { locale } }: {
       text: 'sectionOne',
       content: "sectionOneContentOne",
       subContent1: "sectionOneContentTwo",
-      subContent2: "sectionOneContentThree"
+      subContent2: "sectionOneContentThree",
+      subContent3: "sectionOneContentFour"
     },
     {
       text: 'sectionTwo',
@@ -69,7 +70,6 @@ const TermsAndConditions = async ({ params: { locale } }: {
       text: "sectionEight",
       content: "sectionEightContentOne",
       subContent1: "sectionEightContentTwo",
-      subContent2: "sectionEightConteentThree",
 
     },
     {
