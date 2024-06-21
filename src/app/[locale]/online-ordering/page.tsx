@@ -5,7 +5,6 @@ import {
   GetInTouchSection,
   MainLayout,
   OnlineOrdering,
-  Testimonials,
 } from "@/components";
 import TranslationsProvider from "@/components/TranslationsProvider";
 import initTranslations from "@/app/i18n";
