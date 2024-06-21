@@ -35,7 +35,7 @@ export const Footer = () => {
               className="!w-[120px] !h-[80px]"
             />
           </Link>
-          <Input className="" type="text" label={t("footer:footer_title")} />
+          <Input className="bg-transparent" type="text" label={t("footer:footer_title")} />
         </div>
         <div className="grid md:grid-cols-3 grid-cols-2 gap-20 mt-16 md:-mt-2">
           <div className="font-medium">

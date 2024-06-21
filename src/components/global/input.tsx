@@ -27,7 +27,7 @@ export const Input: React.FC<IInput> = ({
         <input
           id="input"
           type={type}
-          className={` outline-0 border-0 align-middle place-content-start  bg-transparent font-medium text-gray-primary/50  placeholder:text-gray-primary/50 px-4 text-[16.5px] leading-[28px] ${className}`}
+          className={` focus:border-[0px] focus:outline-none outline-0 border-0 align-middle place-content-start  bg-transparent font-medium text-gray-primary/50  placeholder:text-gray-primary/50 px-4 text-[16.5px] leading-[28px] ${className}`}
           placeholder={t(`${placeholder}`)}
         />
         {!faqs && (
