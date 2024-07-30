@@ -7,7 +7,7 @@ import { useTranslation } from "react-i18next";
 export const SaleSolution = () => {
   const { t } = useTranslation();
   return (
-    <div className="xl:bg-[url('/images/successStory.png')] bg-no-repeat md:-ml-4  bg-contain text-center  flex justify-center items-center  -mt-[7.8rem] xl:flex-col  w-full h-[20rem] mb-20">
+    <div className="xl:bg-[url('/images/successStory.png')] bg-no-repeat md:-ml-4  bg-contain text-center  flex justify-center items-center  xl:flex-col  w-full  py-40">
       <section className="xl:max-w-[71rem]  mx-auto px-[3%] sm:px-4 ">
         <div className="xl:flex sm:items-center xl:space-x-6 xl:justify-between justify-start sm:justify-center text-start  sm:text-center xl:text-left">
           <Slide>

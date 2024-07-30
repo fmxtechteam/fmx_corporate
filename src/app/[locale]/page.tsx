@@ -13,6 +13,7 @@ import {
 } from "@/components";
 import TranslationsProvider from "@/components/TranslationsProvider";
 import initTranslations from "../i18n";
+import { DataSecurity } from "@/components/common/home/DataSecurity";
 
 
 const namespaces = ['home', 'navbar', 'common', 'footer'];
@@ -30,6 +31,7 @@ const Home = async ({ params: { locale } }: {
         <AboutUs />
         <Skyrocket />
         <OurServices />
+        <DataSecurity />
         <SaleSolution />
         <VideoSection />
         <Faqs faqs={faqs} />
