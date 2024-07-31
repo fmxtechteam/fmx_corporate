@@ -13,3 +13,7 @@
 .bg__about:nth-child(1) {
   grid-column-start: 2 !important;
 }
+
+.shadow-dropdown {
+  box-shadow: 0px 4px 4px 0px #0000001a;
+}
