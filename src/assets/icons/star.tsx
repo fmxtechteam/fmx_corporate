@@ -1,8 +1,9 @@
-export const Star = ({ className }: { className?: string }) => {
+export const Star = ({ className, width,
+  height }: props) => {
   return (
     <svg
-      width="26"
-      height="24"
+      width={width || "26"}
+      height={height || "24"}
       viewBox="0 0 26 24"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
@@ -15,3 +16,4 @@ export const Star = ({ className }: { className?: string }) => {
     </svg>
   );
 };
+interface props { className?: string, height?: string, width?: string }
