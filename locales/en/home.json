@@ -47,7 +47,8 @@
   "security_list_heading2": "Data Center Located in Japan",
   "security_list_heading3": "Compliance With Domestic Regulations",
   "security_list_content1": "Our application is designed to safeguard your information. AWS's advanced technologies ensure that your data remains protected against any potential threats.",
-  "security_list_content2": "Your data is stored in local data centers within Japan, ensuring seamless compliance with domestic regulations and enhanced data privacy for ultmost safety and security.",
-  "security_list_content3": "We are committed to adhering to the stringent data protection laws of Japan, including the Act on the Protection of Personal Information (APPI) and JIS Q 27001 standards.",
-  "secured_by_amazon": "Secured by Amazon"
+  "security_list_content2": "Your data is stored in local data centers within Japan, ensuring seamless compliance with domestic regulations and enhanced data privacy. We guarantee that no personal data is transferred outside of Japan's borders.",
+  "security_list_content3": "We appreciate your trust in us and are dedicated to upholding the highest standards of data security and protection, aligning with Japan's stringent data protection laws.",
+  "secured_by_amazon": "Secured by Amazon",
+  "data_security": "Data Security"
 }
