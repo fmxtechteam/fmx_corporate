@@ -14,7 +14,7 @@ export const DataSecurity = () => {
   const { t } = useTranslation();
   return (
     <section className=" md:pt-20 py-6">
-      <div className="container mx-auto md:p-0 p-2">
+      <div className="max-w-[1192px] container mx-auto md:p-0 p-2">
         <div className="flex md:flex-row flex-col-reverse md:gap-20" >
           <section className="md:py-10 py-4 relative">
 
@@ -33,20 +33,21 @@ export const DataSecurity = () => {
               </p>
             </div>
           </section>
-          <section className="bg-[url('/images/lady-security.png')] bg-no-repeat w-full md:h-[450px] bg-cover bg-center p-4 h-[400px] rounded-lg">
-            <div className="bg-gray rounded-lg py-3 px-4 w-[198px] grid gap-3">
+          <section className="bg-[url('/images/lady-security.svg')] bg-no-repeat w-full md:h-[450px] bg-cover bg-center p-4 h-[400px] rounded-lg flex justify-center items-center">
+            <div className="bg-gray rounded-lg  md:px-10 px-5 grid md:gap-3  gap-[6px] md:w-[248px] w-[128.44px]  md:py-6  py-3">
               <Fade>
-                <p className="text-dark font-bold md:text-lg text-base"> {t('secured_by_amazon')}</p>
+                <h4 className="text-dark font-medium md:text-[28px] md:leading-8 text-center text-sm w-full">{t('data_security')}</h4>
+                <p className='text-secondary font-bold md:text-lg md:leading-[21px] text-[9.32px] leading-[10.93px] text-center'>{t('secured_by_amazon')}</p>
+                <Image src={'/images/badge.svg'} alt="Badge" width={0} height={0} className="h-[88px] w-full md:w-[150px] md:h-[170px]" />
               </Fade>
-              <Fade>
-                <div className='flex gap-2' >
-                  <Star className="" />
-                  <Star className="" />
-                  <Star className="" />
-                  <Star className="" />
-                  <Star className="" />
+              <div className='flex justify-center items-center'>
+                <div className='md:block hidden'>
+                  <Stars type="desktop" />
                 </div>
-              </Fade>
+                <div className='md:hidden block'>
+                  <Stars type="mobile" />
+                </div>
+              </div>
             </div>
           </section>
         </div>
@@ -55,9 +56,7 @@ export const DataSecurity = () => {
             lists?.map((list, index) => (
               <Fragment key={`${list.title}-${index}`}>
                 <Fade>
-
-
-                  <div className="shadow-dropdown py-8 px-6 rounded-3xl border border-dark/15 space-y-6" >
+                  <div className="shadow-dropdown py-8 px-6 rounded-3xl border border-dark/15 space-y-6 md:h-[339px]" >
                     <div className="shadow-dropdown h-[56px] w-[56px] bg-[#F3FBF3] rounded-lg p-4 flex justify-center items-center">
                       {list.icon}
                     </div>

@@ -16,12 +16,11 @@ import { useTranslation } from "react-i18next";
 export const Navbar = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
   const current = usePathname();
-  console.log(current)
   const { t } = useTranslation();
   return (
     <>
       <header className="bg-white shadow-[0px_1px_4px_0px_#0000000D] w-full">
-        <div className="flex lg:space-x-[100px] px-[3%] sm:px-0 items-center max-w-[80rem] mx-auto pt-[8px] pb-[10px] justify-between">
+        <div className="flex lg:space-x-[100px] px-[3%] sm:px-0 items-center max-w-[1192px] mx-auto pt-[8px] pb-[10px] justify-between">
           <Link href="/" className="flex-grow my-[9.2px]">
             <Image src={logo} alt="Company Logo" className="!w-[60px]" />
           </Link>
@@ -112,7 +111,7 @@ export const Navbar = () => {
             <div className=" lg:block hidden">
               <LanguageChanger />
             </div>
-            <div className="flex space-x-2 lg:space-x-4  items-center">
+            <div className="flex gap-3  items-center">
               <Button
                 link={"https://app.freshmarketxchange.co/"}
                 title={t('navbar:user_login')}
