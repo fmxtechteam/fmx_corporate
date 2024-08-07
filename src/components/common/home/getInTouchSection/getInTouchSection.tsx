@@ -1,4 +1,4 @@
-'use client';
+"use client";
 import Image from "next/image";
 
 import { Button } from "@/components";
@@ -17,14 +17,16 @@ export const GetInTouchSection = () => {
       />
       <div className="md:text-[2.3rem] text-[1.9rem] max-w-[20rem] md:max-w-none font-medium leading-[1.6] pt-[5rem] md:pt-14 space-y-10 absolute h-full -top-10 w-full flex items-center justify-center flex-col">
         <Slide direction="down">
-          <div className="-mb-6">{t('getInTouchSection_heading')}</div>
+          <div className="-mb-6">{t("getInTouchSection_heading")}</div>
         </Slide>
         <Slide direction="up">
-          <p className="text-[17px] md:text-[16.5px] leading-[40px] md:leading-[29px] text-gray/60 max-w-[22rem] md:max-w-[26rem] px-6 md:px-0 pt-3 md:pt-0 w-[24rem]">{t('getInTouchSection_sub_heading')}</p>
+          <p className="text-[17px] md:text-[16.5px] leading-[40px] md:leading-[29px] text-gray/60 max-w-[22rem] md:max-w-[26rem] px-6 md:px-0 pt-3 md:pt-0 w-[24rem]">
+            {t("getInTouchSection_sub_heading")}
+          </p>
         </Slide>
         <Bounce triggerOnce>
           <Button
-            link={"/login"}
+            link={"/contact-us"}
             title={t("common:get_in_touch")}
             className="!px-[6rem] md:!px-[5rem] !rounded-[7.9px] mt-[24px] mb-2 md:mb-0 transition-all !normal-case !w-max !mx-auto md:mt-1 hover:gap-x-[2px] !text-[16px] !py-[14.5px] !container md:!rounded-[16px] !flex-grow"
             iconClassName="hover:!pl-1"

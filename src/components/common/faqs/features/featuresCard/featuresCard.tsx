@@ -29,7 +29,7 @@ export const FeaturesCard = () => {
             customers with convenience.`}
               </p>
               <Button
-                link={"/login"}
+                link={"https://pos.freshmarketxchange.co/"}
                 title="Get Started Free"
                 className="sm:!px-[2rem] mt-[42px] lg:!px-[4.4rem] !w-fit lg:!py-[.9rem] !text-[16px] !rounded-[16px] !px-[2rem] !py-[7px] !container !flex-grow"
                 icon={true}
