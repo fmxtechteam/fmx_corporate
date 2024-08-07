@@ -15,7 +15,7 @@ export const ShowcaseComponent = () => {
         </p>
         <div className="flex items-center justify-center mb-16 mt-[3.8rem]">
           <Button
-            link={"/login"}
+            link={"https://pos.freshmarketxchange.co/"}
             title="Get Started Free"
             className="sm:!px-[2rem] lg:!px-[4.4rem] lg:!py-[.9rem] !text-[16px] !rounded-[16px] !px-[2rem] !py-[7px] !container !flex-grow"
             icon={true}

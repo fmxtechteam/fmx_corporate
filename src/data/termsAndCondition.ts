@@ -15,11 +15,6 @@ export const termsAndCondition = [
     description: "content3",
   },
   {
-    id: 4,
-    title: "title4",
-    description: "content4",
-  },
-  {
     id: 5,
     title: "title5",
     description: "content5",

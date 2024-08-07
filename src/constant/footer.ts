@@ -16,10 +16,6 @@ export const supports = [
     name: "talk_to_support",
     path: "/contact-us",
   },
-  {
-    name: "help_centre",
-    path: "/contact-us",
-  },
 ];
 
 export const services = [

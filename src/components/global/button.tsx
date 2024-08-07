@@ -9,9 +9,10 @@ export const Button: React.FC<IButton> = ({
   link,
   icon = false,
   iconClassName,
+  target,
 }) => {
   return (
-    <Link href={link}>
+    <Link href={link} target={target ? "_blank" : ""}>
       <button
         className={`${className} transition-all duration-700 bg-primary md:!px-[22px] text-[12px] !px-[20px] md:text-[14.5px] font-medium md:font-bold md:py-[9.6px] rounded-lg capitalize text-white flex items-center`}
       >

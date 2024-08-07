@@ -1,4 +1,4 @@
-'use client';
+"use client";
 import { onlineOrdering } from "@/data";
 import { Button } from "@/components";
 import { BenefitsImage } from "./benefitsImage/benefitsImage";
@@ -14,8 +14,9 @@ export const Benefits = ({ aboutUs = false }: { aboutUs?: boolean }) => {
           className="grid md:grid-cols-2 items-start gap-y-10 md:gap-y-0  gap-x-20 mb-[4.5rem]  md:mb-[5.5rem] justify-between"
         >
           <div
-            className={`${id === 1 && "md:!order-1"} ${id === 3 && "md:!order-1"
-              } max-w-md md:max-w-none order-1 md:order-[-1]`}
+            className={`${id === 1 && "md:!order-1"} ${
+              id === 3 && "md:!order-1"
+            } max-w-md md:max-w-none order-1 md:order-[-1]`}
           >
             <h2 className="text-primary text-[15.6px] bg-primary/5 w-fit mb-4 font-medium py-1 px-[17px] rounded-lg uppercase">
               {t(`online_ordering:${title}`)}
@@ -28,7 +29,7 @@ export const Benefits = ({ aboutUs = false }: { aboutUs?: boolean }) => {
             </p>
             {aboutUs && (
               <Button
-                link={"/login"}
+                link={"https://pos.freshmarketxchange.co/"}
                 title={t("common:get_started")}
                 className="sm:!px-[2rem] mt-[42px] lg:!px-[4.4rem] !w-fit lg:!py-[.9rem] !text-[16px] !rounded-[16px] !px-[2rem] !py-[7px] !container !flex-grow"
                 icon={true}

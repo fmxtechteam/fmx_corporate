@@ -29,13 +29,18 @@ export const Navbar = () => {
               {routes.map((route) => (
                 <li
                   key={route.id}
-                  className={`flex items-center justify-center ${current.includes(route.id) ? " text-dark" : ""
-                    }`}
+                  className={`flex items-center justify-center ${
+                    current.includes(route.id) ? " text-dark" : ""
+                  }`}
                 >
                   {current.includes(route.id) ? (
                     <div className="w-[2.5rem] h-[2.6px] bg-primary/60 absolute bottom-0 rounded-full" />
-                  ) : route.id === '/home' ? <div className="w-[2.5rem] h-[2.6px] bg-primary/60 absolute bottom-0 rounded-full" /> : null}
-                  {route.link && <Link href={route.link}>{t(`navbar:${route.name}`)}</Link>}
+                  ) : route.id === "/home" ? (
+                    <div className="w-[2.5rem] h-[2.6px] bg-primary/60 absolute bottom-0 rounded-full" />
+                  ) : null}
+                  {route.link && (
+                    <Link href={route.link}>{t(`navbar:${route.name}`)}</Link>
+                  )}
                   {!route.link && (
                     <>
                       {route.id === "services" && (
@@ -70,8 +75,9 @@ export const Navbar = () => {
                                         <Menu.Item>
                                           {({ active }) => (
                                             <Link
-                                              className={`w-full flex space-x-8 items-center bg-gray/50 font-medium ${active && ""
-                                                }`}
+                                              className={`w-full flex space-x-8 items-center bg-gray/50 font-medium ${
+                                                active && ""
+                                              }`}
                                               href={link}
                                             >
                                               <Icon className="w-10 h-10" />
@@ -113,25 +119,29 @@ export const Navbar = () => {
             </div>
             <div className="flex gap-3  items-center">
               <Button
-                link={"https://app.freshmarketxchange.co/"}
-                title={t('navbar:user_login')}
+                target={true}
+                link={"https://pos.freshmarketxchange.co/"}
+                title={t("navbar:user_login")}
                 className="!bg-transparent border !py-[8px] md:!py-[9.6px]  !border-primary !text-primary"
               />
               <Button
-                link={"https://app.freshmarketxchange.co/register"}
-                title={t('navbar:register')}
+                link={"https://pos.freshmarketxchange.co/register"}
+                title={t("navbar:register")}
                 className="mr-2 lg:mr-0  !py-[8px] md:!py-[9.6px]"
+                target={true}
               />
               <button
-                className={`w-10  flex justify-center ${isOpen === true ? "hidden" : ""
-                  } cursor-pointer transition-all duration-300`}
+                className={`w-10  flex justify-center ${
+                  isOpen === true ? "hidden" : ""
+                } cursor-pointer transition-all duration-300`}
                 onClick={() => setIsOpen((c) => !c)}
               >
                 <Hamburger className={`xl:hidden cursor-pointer`} />
               </button>
               <button
-                className={`w-10 flex justify-center xl:hidden ${!isOpen ? "hidden" : ""
-                  } cursor-pointer transition-all duration-300`}
+                className={`w-10 flex justify-center xl:hidden ${
+                  !isOpen ? "hidden" : ""
+                } cursor-pointer transition-all duration-300`}
                 onClick={() => setIsOpen((c) => !c)}
               >
                 <CancelIcon className="fill-current text-dark cursor-pointer w-5 h-5" />
