@@ -7,10 +7,10 @@ export const contactUs = [
     address: "contactUS_address2",
     country: "contactUS_country2",
   },
-  {
-    id: 2,
-    image: japanOffice,
-    address: "contactUS_address1",
-    country: "contactUS_country1",
-  },
+  // {
+  //   id: 2,
+  //   image: japanOffice,
+  //   address: "contactUS_address1",
+  //   country: "contactUS_country1",
+  // },
 ];

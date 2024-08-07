@@ -1,28 +1,47 @@
-'use client'
-import { ShowcaseBanner } from '@/components/global'
-import React from 'react'
-import { AboutUsIcon } from "@/assets/icons";
-import { useTranslation } from 'react-i18next';
+"use client";
+import React from "react";
+import { useTranslation } from "react-i18next";
+import Image from "next/image";
+import { market2 } from "@/constant/imgs";
+import { Fade } from "react-awesome-reveal";
+import Carousel from "@/components/Carousel";
 export const ShowCaseAboutUs = () => {
-    const { t } = useTranslation();
-    return (
-        <div className="h-full bg-cover w-full md:h-auto">
-            <ShowcaseBanner
-                title={t('aboutUs:showcase')}
-                className="!max-w-[20rem] md:!max-w-[33rem] -mt-0 md:-mt-0 leading-[50px]"
-                icon={AboutUsIcon}
-                iconClassName="w-[9rem] md:!w-[8rem]"
-                pos={false}
-                aboutUs={true}
-                aboutUsImg={true}
-                bg=""
-                description={t('aboutUs:description')}
-                containerClassName="!overflow-hidden xl:h-[55.3rem] h-[44.5rem]"
-                descriptionClassName="!max-w-[20rem] mt-8 md:mt-10 md:!max-w-[26rem]"
-                buttonClassName="md:!py-[16.5px]"
-                aboutText={t('aboutUs:title')}
+  const { t } = useTranslation();
+  const images = [
+    "https://res.cloudinary.com/mobinet/image/upload/v1723025810/market9_li6s2p.jpg",
+    "https://res.cloudinary.com/mobinet/image/upload/v1723025808/market4_kn6rfn.jpg",
+    "https://res.cloudinary.com/mobinet/image/upload/v1723025808/market2_nalgna.jpg",
+    "https://res.cloudinary.com/mobinet/image/upload/v1723025810/market10_fwxc2d.jpg",
+  ];
 
-            />
+  return (
+    <main className="md:py-10 py-4">
+      <section className="container mx-auto max-w-[1192px] md:px-0 px-3">
+        <div className=" justify-center items-center flex">
+          <Fade direction="down">
+            <h4 className="py-2 px-4 rounded-[4px] text-primary font-medium text-xl border border-dark/15 w-[180px] leading-[18.75px] capitalize text-center">
+              {t("aboutUs:title")}
+            </h4>
+          </Fade>
         </div>
-    )
-}
+        <div className="py-2 justify-center items-center flex ">
+          <Fade direction="bottom-right">
+            <h2 className="md:text-[56px] text-[26px] md:leading-[84px] leading-[39px] font-medium text-center text-dark md:w-[583px] w-[265px] my-2">
+              {t("aboutUs:showcase")}
+            </h2>
+          </Fade>
+        </div>
+        <div className="py-2 justify-center items-center flex ">
+          <Fade cascade={true}>
+            <p className="md:text-lg text-base leading-[30px] font-medium text-center text-dark/50 md:w-[500px] w-full ">
+              {t("aboutUs:description")}
+            </p>
+          </Fade>
+        </div>
+      </section>
+      <div className="">
+        <Carousel images={images} />
+      </div>
+    </main>
+  );
+};

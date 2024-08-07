@@ -32,6 +32,9 @@ import hitoshiImg from "@/assets/images/hitoshi.png";
 import tolulopeImg from "@/assets/images/tolulope.png";
 import uenoImg from "@/assets/images/ueno.jpeg";
 import aboutShowcaseImg from "@/assets/images/about-showcase-img-md.png";
+import market1 from "@/assets/images/market1.jpg";
+import market2 from "@/assets/images/market2.jpg";
+import market9 from "@/assets/images/market9.jpeg";
 
 export {
   homeFrame,
@@ -67,4 +70,7 @@ export {
   hitoshiImg,
   tolulopeImg,
   aboutShowcaseImg,
+  market1,
+  market2,
+  market9,
 };

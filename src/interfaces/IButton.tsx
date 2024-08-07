@@ -4,4 +4,5 @@ export interface IButton {
   link: string;
   icon?: boolean;
   iconClassName?: string;
+  target?: boolean;
 }
