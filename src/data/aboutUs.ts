@@ -45,13 +45,7 @@ export const aboutUsCard = [
     description: "ourTeam_team_description2",
     image: hitoshiImg,
   },
-  {
-    id: 3,
-    name: "Takaaki Ueno",
-    title: "ourTeam_team_title3",
-    description: "ourTeam_team_description3",
-    image: uenoImg,
-  },
+
   {
     id: 2,
     title: "ourTeam_team_title1",
