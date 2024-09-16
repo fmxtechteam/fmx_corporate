@@ -8,10 +8,10 @@ import Carousel from "@/components/Carousel";
 export const ShowCaseAboutUs = () => {
   const { t } = useTranslation();
   const images = [
-    "https://res.cloudinary.com/mobinet/image/upload/v1723025810/market9_li6s2p.jpg",
     "https://res.cloudinary.com/mobinet/image/upload/v1723025808/market4_kn6rfn.jpg",
     "https://res.cloudinary.com/mobinet/image/upload/v1723025808/market2_nalgna.jpg",
     "https://res.cloudinary.com/mobinet/image/upload/v1723025810/market10_fwxc2d.jpg",
+    "https://res.cloudinary.com/mobinet/image/upload/v1723025808/market1_ppb6is.jpg",
   ];
 
   return (

@@ -1,17 +1,17 @@
-'use client'
+"use client";
 import { aboutUs } from "@/data";
 import { useTranslation } from "react-i18next";
 
 export const WhyChooseFmx = () => {
   const { t } = useTranslation();
   return (
-    <div className="sm:px-0 px-[3%] max-w-[70.6rem] mx-auto -mt-[5rem] md:-mt-[2.8rem]">
+    <div className="sm:px-0 px-[3%] max-w-[70.6rem] mx-auto">
       <div className="flex flex-col text-lg md:text-[15.7px] items-center font-medium w-full mb-6">
-        <h3>{t('aboutUs:whychoosefmx_title')}</h3>
+        <h3>{t("aboutUs:whychoosefmx_title")}</h3>
         <div
           className={`text-3xl max-w-sm md:text-[36px] md:max-w-[34rem] text-center md:leading-[55px] font-medium mt-4 md:mt-2`}
         >
-          {t('aboutUs:whychoosefmx_description')}
+          {t("aboutUs:whychoosefmx_description")}
         </div>
       </div>
       <div>
