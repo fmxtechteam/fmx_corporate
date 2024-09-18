@@ -2,12 +2,7 @@
 const nextConfig = {
   staticPageGenerationTimeout: 1000,
   images: {
-    remotePatterns: [
-      {
-        protocol: "https",
-        hostname: "res.cloudinary.com",
-      },
-    ],
+    domains: ["res.cloudinary.com"],
   },
 };
 
