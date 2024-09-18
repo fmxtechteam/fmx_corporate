@@ -1,19 +1,18 @@
 "use client";
 import React from "react";
 import { useTranslation } from "react-i18next";
-import Image from "next/image";
-import { market2 } from "@/constant/imgs";
 import { Fade } from "react-awesome-reveal";
 import Carousel from "@/components/Carousel";
 export const ShowCaseAboutUs = () => {
   const { t } = useTranslation();
   const images = [
-    "https://res.cloudinary.com/mobinet/image/upload/v1723025808/market4_kn6rfn.jpg",
+    "https://res.cloudinary.com/mobinet/image/upload/v1726628921/WhatsApp_Image_2024-09-18_at_03.05.37_ynnf8z.jpg",
+    "https://res.cloudinary.com/mobinet/image/upload/v1726628921/WhatsApp_Image_2024-09-18_at_03.07.36_wafih4.jpg",
     "https://res.cloudinary.com/mobinet/image/upload/v1723025808/market2_nalgna.jpg",
-    "https://res.cloudinary.com/mobinet/image/upload/v1723025810/market10_fwxc2d.jpg",
+    "https://res.cloudinary.com/mobinet/image/upload/v1726628920/WhatsApp_Image_2024-09-18_at_03.08.13_chuhnp.jpg",
+    "https://res.cloudinary.com/mobinet/image/upload/v1726629131/WhatsApp_Image_2024-09-18_at_03.03.57_xxtbej.jpg",
     "https://res.cloudinary.com/mobinet/image/upload/v1723025808/market1_ppb6is.jpg",
   ];
-
   return (
     <main className="md:py-10 py-4">
       <section className="container mx-auto max-w-[1192px] md:px-0 px-3">
